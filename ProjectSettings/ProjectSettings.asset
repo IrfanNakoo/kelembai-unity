@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 23
-  productGUID: 00000000000000000000000000000000
+  productGUID: e3c8031ae4179b54d9eec5df3bc29d36
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -796,7 +796,7 @@ PlayerSettings:
   cloudProjectId: 7679958d-4250-43b5-96a3-c75768b67a53
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: kelembai+unity_updated
   organizationId: kelembai-solution-as-publisher
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
