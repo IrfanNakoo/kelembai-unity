@@ -51,7 +51,7 @@ namespace VSX.Utilities
         {
             foreach (Animator m_Animator in animators)
             {
-                m_Animator.keepAnimatorStateOnDisable = keepAnimatorStateOnDisable;
+                m_Animator.keepAnimatorControllerStateOnDisable = keepAnimatorStateOnDisable;
             }
         }
 
