@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modulePrefab: {fileID: 114115692733585616, guid: 5a6809ebdaf2a204caf961b71cca177f,
     type: 3}
-  overrideModuleLabel: 0
-  overrideLabel: Label Override
+  overrideModuleLabel: 1
+  overrideLabel: Medium Range Missile
   description: Medium Range Missile
   sprites:
   - {fileID: 21300000, guid: 7d8476e3767de9445a6aaa036e0299a7, type: 3}

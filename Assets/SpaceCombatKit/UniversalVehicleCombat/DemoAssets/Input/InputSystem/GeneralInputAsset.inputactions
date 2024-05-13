@@ -405,6 +405,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Fire Tertiary",
+                    "type": "Button",
+                    "id": "318e912c-397c-4e2e-92f1-764ea11ab493",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -449,6 +458,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Fire Secondary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3438d819-b5e2-4a8c-a5d3-886531c123aa",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseKeyboard",
+                    "action": "Fire Tertiary",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modulePrefab: {fileID: 5707314143745184738, guid: bcae21ebbca0d6b4cbde2f658247f5a2,
     type: 3}
-  overrideModuleLabel: 0
-  overrideLabel: Label Override
+  overrideModuleLabel: 1
+  overrideLabel: Single Minigun
   description: Single MiniGun
   sprites:
   - {fileID: 21300000, guid: d5091363c30b41349a4a8e95fb7a62c3, type: 3}
