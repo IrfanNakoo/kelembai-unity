@@ -50,4 +50,4 @@ MonoBehaviour:
   overrideLabel: Single Minigun
   description: Single MiniGun
   sprites:
-  - {fileID: 21300000, guid: d5091363c30b41349a4a8e95fb7a62c3, type: 3}
+  - {fileID: 21300000, guid: 8a1b2ccb49cb8fc408778fe159c21e97, type: 3}

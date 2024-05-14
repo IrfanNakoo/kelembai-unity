@@ -50,4 +50,4 @@ MonoBehaviour:
   overrideLabel: Laser Beam
   description: High Damage Laser
   sprites:
-  - {fileID: 21300000, guid: d1e0335dd79562d40b8ab0095ccdab27, type: 3}
+  - {fileID: 21300000, guid: 759ad3fed547e3e43b2c40da80d0f6b7, type: 3}
