@@ -249,8 +249,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveControllers:
   - {fileID: 1927126538}
-  - {fileID: 0}
-  - {fileID: 0}
   loopWaves: 1
   onWavesDestroyed:
     m_PersistentCalls:
@@ -1362,6 +1360,41 @@ PrefabInstance:
     - target: {fileID: 1108499691819585015, guid: af360bbc6ad846248b9fde2c898c02b3,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149507203689679471, guid: af360bbc6ad846248b9fde2c898c02b3,
+        type: 3}
+      propertyPath: ColorBySpeedModule.gradient.maxGradient.ctime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149507203689679471, guid: af360bbc6ad846248b9fde2c898c02b3,
+        type: 3}
+      propertyPath: ColorBySpeedModule.gradient.maxGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149507203689679471, guid: af360bbc6ad846248b9fde2c898c02b3,
+        type: 3}
+      propertyPath: ColorBySpeedModule.gradient.maxGradient.key0.g
+      value: 0.6877341
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149507203689679471, guid: af360bbc6ad846248b9fde2c898c02b3,
+        type: 3}
+      propertyPath: ColorBySpeedModule.gradient.maxGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149507203689679471, guid: af360bbc6ad846248b9fde2c898c02b3,
+        type: 3}
+      propertyPath: ColorBySpeedModule.gradient.maxGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149507203689679471, guid: af360bbc6ad846248b9fde2c898c02b3,
+        type: 3}
+      propertyPath: ColorBySpeedModule.gradient.maxGradient.key1.g
+      value: 0.6877341
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149507203689679471, guid: af360bbc6ad846248b9fde2c898c02b3,
+        type: 3}
+      propertyPath: ColorBySpeedModule.gradient.maxGradient.key1.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1861313157957842729, guid: af360bbc6ad846248b9fde2c898c02b3,
@@ -2589,7 +2622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTimerOnEnable: 1
-  duration: 5
+  duration: 30
   delay: 0
   timerEvents: []
   randomizedDuration: 0
