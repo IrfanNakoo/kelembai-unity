@@ -429,10 +429,10 @@ public partial class @GeneralInputAsset: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Fire Tertiary"",
-                    ""type"": ""Button"",
+                    ""name"": ""Scroll To Tertier"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""318e912c-397c-4e2e-92f1-764ea11ab493"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -486,11 +486,11 @@ public partial class @GeneralInputAsset: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3438d819-b5e2-4a8c-a5d3-886531c123aa"",
-                    ""path"": ""<Keyboard>/r"",
+                    ""path"": ""<Mouse>/scroll/y"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""MouseKeyboard"",
-                    ""action"": ""Fire Tertiary"",
+                    ""action"": ""Scroll To Tertier"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -550,7 +550,7 @@ public partial class @GeneralInputAsset: IInputActionCollection2, IDisposable
         m_WeaponControls = asset.FindActionMap("Weapon Controls", throwIfNotFound: true);
         m_WeaponControls_FirePrimary = m_WeaponControls.FindAction("Fire Primary", throwIfNotFound: true);
         m_WeaponControls_FireSecondary = m_WeaponControls.FindAction("Fire Secondary", throwIfNotFound: true);
-        m_WeaponControls_FireTertiary = m_WeaponControls.FindAction("Fire Tertiary", throwIfNotFound: true);
+        m_WeaponControls_ScrollToTertier = m_WeaponControls.FindAction("Scroll To Tertier", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -832,14 +832,14 @@ public partial class @GeneralInputAsset: IInputActionCollection2, IDisposable
     private List<IWeaponControlsActions> m_WeaponControlsActionsCallbackInterfaces = new List<IWeaponControlsActions>();
     private readonly InputAction m_WeaponControls_FirePrimary;
     private readonly InputAction m_WeaponControls_FireSecondary;
-    private readonly InputAction m_WeaponControls_FireTertiary;
+    private readonly InputAction m_WeaponControls_ScrollToTertier;
     public struct WeaponControlsActions
     {
         private @GeneralInputAsset m_Wrapper;
         public WeaponControlsActions(@GeneralInputAsset wrapper) { m_Wrapper = wrapper; }
         public InputAction @FirePrimary => m_Wrapper.m_WeaponControls_FirePrimary;
         public InputAction @FireSecondary => m_Wrapper.m_WeaponControls_FireSecondary;
-        public InputAction @FireTertiary => m_Wrapper.m_WeaponControls_FireTertiary;
+        public InputAction @ScrollToTertier => m_Wrapper.m_WeaponControls_ScrollToTertier;
         public InputActionMap Get() { return m_Wrapper.m_WeaponControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -855,9 +855,9 @@ public partial class @GeneralInputAsset: IInputActionCollection2, IDisposable
             @FireSecondary.started += instance.OnFireSecondary;
             @FireSecondary.performed += instance.OnFireSecondary;
             @FireSecondary.canceled += instance.OnFireSecondary;
-            @FireTertiary.started += instance.OnFireTertiary;
-            @FireTertiary.performed += instance.OnFireTertiary;
-            @FireTertiary.canceled += instance.OnFireTertiary;
+            @ScrollToTertier.started += instance.OnScrollToTertier;
+            @ScrollToTertier.performed += instance.OnScrollToTertier;
+            @ScrollToTertier.canceled += instance.OnScrollToTertier;
         }
 
         private void UnregisterCallbacks(IWeaponControlsActions instance)
@@ -868,9 +868,9 @@ public partial class @GeneralInputAsset: IInputActionCollection2, IDisposable
             @FireSecondary.started -= instance.OnFireSecondary;
             @FireSecondary.performed -= instance.OnFireSecondary;
             @FireSecondary.canceled -= instance.OnFireSecondary;
-            @FireTertiary.started -= instance.OnFireTertiary;
-            @FireTertiary.performed -= instance.OnFireTertiary;
-            @FireTertiary.canceled -= instance.OnFireTertiary;
+            @ScrollToTertier.started -= instance.OnScrollToTertier;
+            @ScrollToTertier.performed -= instance.OnScrollToTertier;
+            @ScrollToTertier.canceled -= instance.OnScrollToTertier;
         }
 
         public void RemoveCallbacks(IWeaponControlsActions instance)
@@ -932,6 +932,6 @@ public partial class @GeneralInputAsset: IInputActionCollection2, IDisposable
     {
         void OnFirePrimary(InputAction.CallbackContext context);
         void OnFireSecondary(InputAction.CallbackContext context);
-        void OnFireTertiary(InputAction.CallbackContext context);
+        void OnScrollToTertier(InputAction.CallbackContext context);
     }
 }
