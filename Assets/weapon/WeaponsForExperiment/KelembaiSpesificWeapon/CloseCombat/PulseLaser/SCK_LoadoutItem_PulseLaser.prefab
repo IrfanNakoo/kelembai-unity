@@ -50,4 +50,4 @@ MonoBehaviour:
   overrideLabel: Pulse laser
   description: Pulsed Laser
   sprites:
-  - {fileID: 21300000, guid: 994eb3d038c55dd40a1de132066ca023, type: 3}
+  - {fileID: 21300000, guid: ce64c43ec9adb584f906963bf57cff13, type: 3}
