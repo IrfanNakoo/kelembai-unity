@@ -273,7 +273,7 @@ public partial class @GeneralInputAsset: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3337a3d2-44e0-4a12-be15-43b8c591649c"",
-                    ""path"": ""<Keyboard>/period"",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""MouseKeyboard"",
@@ -284,7 +284,7 @@ public partial class @GeneralInputAsset: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b84ea82f-e6ea-400f-9f74-29ad7ddb6a17"",
-                    ""path"": ""<Keyboard>/comma"",
+                    ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""MouseKeyboard"",

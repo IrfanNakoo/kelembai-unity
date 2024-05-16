@@ -1200,9 +1200,9 @@ MonoBehaviour:
   movementModulators: []
   boostModulators: []
   m_rigidbody: {fileID: 3435340395946875892}
-  maxMovementForces: {x: 600, y: 600, z: 600}
+  maxMovementForces: {x: 500, y: 500, z: 500}
   maxSteeringForces: {x: 16, y: 16, z: 16}
-  maxBoostForces: {x: 1000, y: 1000, z: 1000}
+  maxBoostForces: {x: 600, y: 600, z: 600}
   movementInputResponseSpeed: 5
   steeringBySpeedCurve:
     serializedVersion: 2
