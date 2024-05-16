@@ -20832,8 +20832,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.07598877
-        value: 0
+        time: 0.052051544
+        value: 0.5059509
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -20875,7 +20875,7 @@ TrailRenderer:
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
-    textureMode: 0
+    textureMode: 1
     shadowBias: 0
     generateLightingData: 0
   m_MinVertexDistance: 0.1
@@ -27208,8 +27208,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.07598877
-        value: 0
+        time: 0.0493927
+        value: 0.5
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -32181,8 +32181,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.07598877
-        value: 0
+        time: 0.0493927
+        value: 0.5178528
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -61214,8 +61214,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.07598877
-        value: 0
+        time: 0.052051544
+        value: 0.5178528
         inSlope: 0
         outSlope: 0
         tangentMode: 0
