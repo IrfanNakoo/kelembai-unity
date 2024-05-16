@@ -11775,9 +11775,9 @@ MonoBehaviour:
   boostModulators:
   - {fileID: 8207393691573787961}
   m_rigidbody: {fileID: 6220824307629873455}
-  maxMovementForces: {x: 400, y: 400, z: 400}
-  maxSteeringForces: {x: 8, y: 8, z: 10}
-  maxBoostForces: {x: 800, y: 800, z: 800}
+  maxMovementForces: {x: 800, y: 800, z: 800}
+  maxSteeringForces: {x: 12, y: 12, z: 15}
+  maxBoostForces: {x: 1000, y: 1000, z: 1000}
   movementInputResponseSpeed: 6
   steeringBySpeedCurve:
     serializedVersion: 2
@@ -19424,7 +19424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8fef8ba6d6f1c14cb2234280e8dc5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: SECONDARY WEAPON
+  label: INTERCEPT MISSILE
   m_ID: Module Mount
   specifyMountableTypes: 1
   mountableTypes:
@@ -21711,6 +21711,7 @@ Transform:
   m_Children:
   - {fileID: 6783321935063842285}
   - {fileID: 4341979639838276044}
+  - {fileID: 5409064541078380881}
   m_Father: {fileID: 5788197672536537829}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22119,6 +22120,78 @@ MonoBehaviour:
   description: Missile weapon.
   sprites:
   - {fileID: 21300000, guid: 7d8476e3767de9445a6aaa036e0299a7, type: 3}
+--- !u!1 &5839309625799761499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5409064541078380881}
+  - component: {fileID: 3465908086392378324}
+  m_Layer: 0
+  m_Name: TertierWeaponMount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5409064541078380881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839309625799761499}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 1.24, y: -1.634, z: 9.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2189296252349717948}
+  m_Father: {fileID: 4736614254892111877}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &3465908086392378324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839309625799761499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8fef8ba6d6f1c14cb2234280e8dc5fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: SHIPKILLER WEAPON
+  m_ID: Module Mount
+  specifyMountableTypes: 1
+  mountableTypes:
+  - {fileID: 11400000, guid: f904c5780b750fb47a7184526d73e4d2, type: 2}
+  parentModulesToMount: 1
+  attachmentPoints: []
+  mountFirstAvailableModuleAtStart: 1
+  sortingIndex: 2
+  setModuleLayer: 0
+  moduleLayer: Default
+  loadExistingChildModules: 1
+  defaultModulePrefabs:
+  - {fileID: 5707314143745184738, guid: 6d4951da97cd97c44889f0e8d77dde20, type: 3}
+  createDefaultModulesAtStart: 1
+  onModuleMounted:
+    m_PersistentCalls:
+      m_Calls: []
+  onModuleUnmounted:
+    m_PersistentCalls:
+      m_Calls: []
+  onModuleAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  onModuleRemoved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5903395829671418724
 GameObject:
   m_ObjectHideFlags: 0
@@ -80670,7 +80743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8fef8ba6d6f1c14cb2234280e8dc5fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  label: PRIMARY WEAPON
+  label: ' CLOSE COMBAT WEAPON'
   m_ID: Module Mount
   specifyMountableTypes: 1
   mountableTypes:
@@ -82239,3 +82312,78 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 31.5
+--- !u!1001 &6819679101926849339
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5409064541078380881}
+    m_Modifications:
+    - target: {fileID: 736155905079047926, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_Name
+      value: SCK_LoadoutItem_ShipKillerWeapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6aee56e0598a94c4a8cc7c1e046e3a18, type: 3}
+--- !u!4 &2189296252349717948 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4667329369619244679, guid: 6aee56e0598a94c4a8cc7c1e046e3a18,
+    type: 3}
+  m_PrefabInstance: {fileID: 6819679101926849339}
+  m_PrefabAsset: {fileID: 0}

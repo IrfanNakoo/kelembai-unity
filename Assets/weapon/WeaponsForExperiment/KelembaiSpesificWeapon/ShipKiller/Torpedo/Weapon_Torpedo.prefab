@@ -177,7 +177,7 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: 7d8476e3767de9445a6aaa036e0299a7, type: 3}
   - {fileID: 21300000, guid: 009311518cfd9ec42abfc611dfb6e100, type: 3}
-  moduleType: {fileID: 11400000, guid: 5db9ac5656eabbe4daa5e4bb277f77eb, type: 2}
+  moduleType: {fileID: 11400000, guid: f904c5780b750fb47a7184526d73e4d2, type: 2}
   attachmentItems: []
   parentAttachmentItems: 0
   setChildLayers: 1
@@ -279,6 +279,7 @@ MonoBehaviour:
   lockingEnabled: 1
   lockingTime: 0
   lockingAngle: 30
+  ignoreLockingAngleDistance: 0
   lockingRange: 1300
   lockingReferenceTransform: {fileID: 4474312126080030}
   startingLockStateForNewTarget: 0

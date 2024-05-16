@@ -30,6 +30,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3996533678447633224}
   - {fileID: 8920881391923021259}
@@ -68,7 +69,6 @@ MonoBehaviour:
   - resourceContainer: {fileID: 1420370199191325979}
     unitResourceChange: -15
     perSecond: 0
-    setEmptyWhenInsufficient: 1
   onFiringFail:
     m_PersistentCalls:
       m_Calls: []
@@ -86,17 +86,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   labels:
   - Pulsed Beam Laser
-  description: 'Twin pulsed laser beam weapons.
+  description: 'Shipkiller Laser
 
 '
   m_ID: Energy Beam Gun Pulsed
   sprites:
   - {fileID: 21300000, guid: 994eb3d038c55dd40a1de132066ca023, type: 3}
   - {fileID: 21300000, guid: 3c5518559a033b64e9fe384a10cb945c, type: 3}
-  moduleType: {fileID: 11400000, guid: 6d17827f1dc7c9a42ae39c625d9c3d54, type: 2}
+  moduleType: {fileID: 11400000, guid: f904c5780b750fb47a7184526d73e4d2, type: 2}
   attachmentItems: []
   parentAttachmentItems: 0
   setChildLayers: 1
+  deactivateGameObjectOnRemovedFromMount: 0
   onMounted:
     m_PersistentCalls:
       m_Calls: []
@@ -255,12 +256,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0263bddc0d9bfc34890c97870aefb0c1, type: 3}
---- !u!4 &8920881391923021259 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7785591892234213116, guid: 0263bddc0d9bfc34890c97870aefb0c1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1713246713558258487}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7700013692626681494 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9015464727045139873, guid: 0263bddc0d9bfc34890c97870aefb0c1,
@@ -273,6 +268,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b2a9941d59e91458b9206565369c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &8920881391923021259 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7785591892234213116, guid: 0263bddc0d9bfc34890c97870aefb0c1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1713246713558258487}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3529752599840212131
 PrefabInstance:
   m_ObjectHideFlags: 0
