@@ -48,6 +48,6 @@ MonoBehaviour:
     type: 3}
   overrideModuleLabel: 1
   overrideLabel: Pulse laser
-  description: Pulsed Laser
+  description: Short Pulsed Laser
   sprites:
   - {fileID: 21300000, guid: ce64c43ec9adb584f906963bf57cff13, type: 3}
