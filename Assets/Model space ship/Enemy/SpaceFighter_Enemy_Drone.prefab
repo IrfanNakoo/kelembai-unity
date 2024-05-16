@@ -2015,7 +2015,7 @@ MonoBehaviour:
   movementModulators: []
   boostModulators: []
   m_rigidbody: {fileID: 6712827993285241308}
-  maxMovementForces: {x: 300, y: 300, z: 300}
+  maxMovementForces: {x: 400, y: 400, z: 400}
   maxSteeringForces: {x: 8, y: 8, z: 10}
   maxBoostForces: {x: 600, y: 600, z: 600}
   movementInputResponseSpeed: 5
