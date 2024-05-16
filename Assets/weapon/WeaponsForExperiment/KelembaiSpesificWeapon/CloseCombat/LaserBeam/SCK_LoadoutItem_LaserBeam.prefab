@@ -48,6 +48,6 @@ MonoBehaviour:
     type: 3}
   overrideModuleLabel: 1
   overrideLabel: Laser Beam
-  description: High Damage Laser
+  description: Short High Damage Laser
   sprites:
   - {fileID: 21300000, guid: 759ad3fed547e3e43b2c40da80d0f6b7, type: 3}
