@@ -19410,7 +19410,7 @@ Transform:
   m_Children:
   - {fileID: 2785806042343857761}
   m_Father: {fileID: 4736614254892111877}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &7462264529962982771
 MonoBehaviour:
@@ -21709,6 +21709,7 @@ Transform:
   m_LocalScale: {x: 1.2652, y: 1.2652, z: 1.2652}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 518133999978341986}
   - {fileID: 6783321935063842285}
   - {fileID: 4341979639838276044}
   m_Father: {fileID: 5788197672536537829}
@@ -22119,6 +22120,81 @@ MonoBehaviour:
   description: Missile weapon.
   sprites:
   - {fileID: 21300000, guid: 7d8476e3767de9445a6aaa036e0299a7, type: 3}
+<<<<<<< Updated upstream
+=======
+--- !u!1 &5839309625799761499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5409064541078380881}
+  - component: {fileID: 3465908086392378324}
+  m_Layer: 0
+  m_Name: TertierWeaponMount
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5409064541078380881
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839309625799761499}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 1.24, y: -1.634, z: 9.69}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2189296252349717948}
+  m_Father: {fileID: 4736614254892111877}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &3465908086392378324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5839309625799761499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8fef8ba6d6f1c14cb2234280e8dc5fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: SHIPKILLER WEAPON
+  m_ID: Module Mount
+  specifyMountableTypes: 1
+  mountableTypes:
+  - {fileID: 11400000, guid: f904c5780b750fb47a7184526d73e4d2, type: 2}
+  parentModulesToMount: 1
+  attachmentPoints: []
+  mountFirstAvailableModuleAtStart: 1
+  sortingIndex: 2
+  setModuleLayer: 0
+  moduleLayer: Default
+  loadExistingChildModules: 1
+  defaultModulePrefabs:
+  - {fileID: 5707314143745184738, guid: 6d4951da97cd97c44889f0e8d77dde20, type: 3}
+  createDefaultModulesAtStart: 1
+  onModuleMounted:
+    m_PersistentCalls:
+      m_Calls: []
+  onModuleUnmounted:
+    m_PersistentCalls:
+      m_Calls: []
+  onModuleAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  onModuleRemoved:
+    m_PersistentCalls:
+      m_Calls: []
+>>>>>>> Stashed changes
 --- !u!1 &5903395829671418724
 GameObject:
   m_ObjectHideFlags: 0
@@ -72227,6 +72303,52 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &6867319080800037397
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 518133999978341986}
+  - component: {fileID: 2799204026328091569}
+  m_Layer: 0
+  m_Name: Weapon Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518133999978341986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6867319080800037397}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4736614254892111877}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2799204026328091569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6867319080800037397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a17290f06c616524081662e3db63126c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SecondaryWeapon: {fileID: 4522736132410164012}
+  TertierWeapon: {fileID: 5839309625799761499}
 --- !u!1 &6877300672536489333
 GameObject:
   m_ObjectHideFlags: 0
@@ -80656,7 +80778,7 @@ Transform:
   - {fileID: 7282902179012111293}
   - {fileID: 5070999545777495789}
   m_Father: {fileID: 4736614254892111877}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &589265428808827824
 MonoBehaviour:
