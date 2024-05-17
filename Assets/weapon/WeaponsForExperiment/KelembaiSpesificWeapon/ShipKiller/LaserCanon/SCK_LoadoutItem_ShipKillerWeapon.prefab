@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2464cc0fb5b0b43b3452dfd2753547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  modulePrefab: {fileID: 5153455454611890870, guid: bbdf912d7b40f2e4baf167d06b750aaf,
+  modulePrefab: {fileID: 8497783357054358760, guid: b3a00f3fd4c100a41850bb783b5f3114,
     type: 3}
   overrideModuleLabel: 1
   overrideLabel: Laser Canon

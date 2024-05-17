@@ -317,7 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthModifier:
     healthModifierType: {fileID: 0}
-    defaultDamageValue: 1000
+    defaultDamageValue: 5000
     damageOverrideValues: []
     damageMultiplier: 1
     defaultHealingValue: 0
@@ -389,6 +389,9 @@ MonoBehaviour:
   lifetime: 3
   disableAfterDistanceCovered: 0
   maxDistance: 1500
+  onDetonated:
+    m_PersistentCalls:
+      m_Calls: []
   m_Rigidbody: {fileID: 54057555662210932}
   propulsionType: 0
   force: 500
@@ -396,6 +399,7 @@ MonoBehaviour:
   noLockLifetime: 4
   triggerMode: 1
   triggerDistance: 49
+  leadTargetThreshold: 1000
   steeringPIDController:
     controllerXAxis:
       proportionalCoefficient: 0.05
@@ -414,6 +418,12 @@ MonoBehaviour:
       integralInfluence: 1
   targetLocker: {fileID: 114045265111119580}
   engines: {fileID: 114906698153286910}
+  onTargetLocked:
+    m_PersistentCalls:
+      m_Calls: []
+  onTargetLockLost:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5461742785237716284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +467,7 @@ MonoBehaviour:
   lockingEnabled: 0
   lockingTime: 0
   lockingAngle: 30
+  ignoreLockingAngleDistance: 0
   lockingRange: 1500
   lockingReferenceTransform: {fileID: 4106589916852744}
   startingLockStateForNewTarget: 0
@@ -501,6 +512,9 @@ MonoBehaviour:
   minMovementInputs: {x: -1, y: -1, z: -0.1}
   maxMovementInputs: {x: 1, y: 1, z: 1}
   steeringInputModifiers: {x: 1, y: 1, z: 1}
+  steeringModulators: []
+  movementModulators: []
+  boostModulators: []
   m_rigidbody: {fileID: 54057555662210932}
   maxMovementForces: {x: 0, y: 0, z: 1000}
   maxSteeringForces: {x: 50, y: 50, z: 50}
@@ -737,6 +751,9 @@ MonoBehaviour:
   lifetime: 3
   disableAfterDistanceCovered: 0
   maxDistance: 1000
+  onDetonated:
+    m_PersistentCalls:
+      m_Calls: []
   m_Rigidbody: {fileID: 54057555662210932}
   propulsionType: 0
   force: 500
@@ -744,6 +761,7 @@ MonoBehaviour:
   noLockLifetime: 4
   triggerMode: 1
   triggerDistance: 49
+  leadTargetThreshold: 1000
   steeringPIDController:
     controllerXAxis:
       proportionalCoefficient: 0.01
@@ -762,6 +780,12 @@ MonoBehaviour:
       integralInfluence: 1
   targetLocker: {fileID: 114045265111119580}
   engines: {fileID: 114906698153286910}
+  onTargetLocked:
+    m_PersistentCalls:
+      m_Calls: []
+  onTargetLockLost:
+    m_PersistentCalls:
+      m_Calls: []
   maxSwarmAmount: 20
   swarmFadeDistance: 100
   swarmFrequency: 2
@@ -5968,9 +5992,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0.68266666, b: 0.52400005, a: 1}
+  m_Color: {r: 1, g: 0, b: 0.033316612, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 25
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
