@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Friendly
   m_EditorClassIdentifier: 
   defaultColor: {r: 0.254902, g: 0.7516339, b: 1, a: 1}
+  sprites: []
   hostileTeams:
   - {fileID: 11400000, guid: f6183930511df324ca41846a92df975f, type: 2}
+  - {fileID: 11400000, guid: 3b90dfd62bf2ae24290d8a19f1dab230, type: 2}

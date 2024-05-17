@@ -11775,8 +11775,8 @@ MonoBehaviour:
   boostModulators:
   - {fileID: 8207393691573787961}
   m_rigidbody: {fileID: 6220824307629873455}
-  maxMovementForces: {x: 800, y: 800, z: 800}
-  maxSteeringForces: {x: 12, y: 12, z: 15}
+  maxMovementForces: {x: 600, y: 600, z: 600}
+  maxSteeringForces: {x: 10, y: 10, z: 12}
   maxBoostForces: {x: 1000, y: 1000, z: 1000}
   movementInputResponseSpeed: 6
   steeringBySpeedCurve:

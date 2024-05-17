@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b8a4a5fb6aebb84097c4cc2e6b533f7, type: 3}
-  m_Name: Enemy
+  m_Name: Player
   m_EditorClassIdentifier: 
-  defaultColor: {r: 1, g: 0.50065356, b: 0.25098038, a: 1}
-  sprites: []
+  defaultColor: {r: 1, g: 0, b: 0.9075022, a: 1}
   hostileTeams:
-  - {fileID: 11400000, guid: db9c6365835e2014aad79d9a779edefc, type: 2}
-  - {fileID: 11400000, guid: 639d4bcf01760754680e8b5bac7a95b6, type: 2}
-  - {fileID: 11400000, guid: 2bcaa351a6db1894eb21facfb4a909da, type: 2}
+  - {fileID: 11400000, guid: d744ecabe7f8a2541864948c32925441, type: 2}
+  - {fileID: 11400000, guid: f6183930511df324ca41846a92df975f, type: 2}
+  priorityLevel: 1
