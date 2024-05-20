@@ -80195,7 +80195,7 @@ GameObject:
   - component: {fileID: 6141600009174693156}
   m_Layer: 11
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

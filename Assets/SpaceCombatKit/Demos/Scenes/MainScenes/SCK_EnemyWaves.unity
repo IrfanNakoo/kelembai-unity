@@ -438,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 3622239738356602429, guid: a33cbc006d202f4428ef0e73fc47643f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1386
       objectReference: {fileID: 0}
     - target: {fileID: 3622239738356602429, guid: a33cbc006d202f4428ef0e73fc47643f,
         type: 3}
@@ -474,6 +474,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622239738690180173, guid: a33cbc006d202f4428ef0e73fc47643f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622239738690180173, guid: a33cbc006d202f4428ef0e73fc47643f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3236
       objectReference: {fileID: 0}
     - target: {fileID: 3622239738708005594, guid: a33cbc006d202f4428ef0e73fc47643f,
         type: 3}
@@ -564,6 +574,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onTimerDisplayUpdated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: TMPro.TMP_Text, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3622239738776568622, guid: a33cbc006d202f4428ef0e73fc47643f,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2632
       objectReference: {fileID: 0}
     - target: {fileID: 3622239738943374523, guid: a33cbc006d202f4428ef0e73fc47643f,
         type: 3}
@@ -1237,7 +1252,7 @@ PrefabInstance:
     - target: {fileID: 9160187105857624261, guid: e335710b9fde64045a562a650736ee4b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1750
+      value: -3531
       objectReference: {fileID: 0}
     - target: {fileID: 9160187105857624261, guid: e335710b9fde64045a562a650736ee4b,
         type: 3}
@@ -1787,6 +1802,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ally Capital need help
+      objectReference: {fileID: 0}
+    - target: {fileID: 1353478960021175633, guid: 58cb640c40a0c5949851ebe1574449a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2776
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668052451973642005, guid: 58cb640c40a0c5949851ebe1574449a5,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58cb640c40a0c5949851ebe1574449a5, type: 3}
