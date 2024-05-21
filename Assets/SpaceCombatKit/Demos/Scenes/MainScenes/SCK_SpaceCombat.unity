@@ -1948,7 +1948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721bd91fd309cb447ae2df7076eb8129, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: SCK_EnemyWaves
+  sceneName: LoadingSceneScreen
 --- !u!1 &2123666658 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1739485472753574, guid: f2744b024e28d8f4a81237e84d4e2949,

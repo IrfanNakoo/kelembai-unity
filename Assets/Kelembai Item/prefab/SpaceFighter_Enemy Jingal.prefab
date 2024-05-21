@@ -1702,7 +1702,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   label: Target
   trackableType: {fileID: 11400000, guid: caacad2eeb66570498913e5edae6cf4a, type: 2}
-  team: {fileID: 11400000, guid: d744ecabe7f8a2541864948c32925441, type: 2}
+  team: {fileID: 11400000, guid: f6183930511df324ca41846a92df975f, type: 2}
   trackingBounds:
     m_Center: {x: 0, y: 0, z: 2.01}
     m_Extent: {x: 9, y: 3.45, z: 6.8}
