@@ -11150,7 +11150,7 @@ MonoBehaviour:
   loadUnmountedModules: 0
   overrideDamageableDefaultSettings: 0
   isDamageable: 1
-  isHealable: 1
+  isHealable: 0
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -20832,8 +20832,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.052051544
-        value: 0.5059509
+        time: 0.10113907
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -27208,8 +27208,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.0493927
-        value: 0.5
+        time: 0.099925995
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -32181,8 +32181,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.0493927
-        value: 0.5178528
+        time: 0.09848404
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -61214,8 +61214,8 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.052051544
-        value: 0.5178528
+        time: 0.10258484
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -76018,8 +76018,8 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.015686275, g: 0.8509804, b: 1, a: 1}
-        key1: {r: 0.015686275, g: 0.8509804, b: 1, a: 1}
+        key0: {r: 0, g: 0.6877341, b: 1, a: 1}
+        key1: {r: 0, g: 0.6877341, b: 1, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 1, g: 1, b: 1, a: 0}
         key4: {r: 1, g: 1, b: 1, a: 0}
