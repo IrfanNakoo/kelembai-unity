@@ -1743,6 +1743,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 369825222518662528, guid: 58cb640c40a0c5949851ebe1574449a5,
+        type: 3}
+      propertyPath: range
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 369825222518662528, guid: 58cb640c40a0c5949851ebe1574449a5,
+        type: 3}
+      propertyPath: trackableTeams.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 369825222518662528, guid: 58cb640c40a0c5949851ebe1574449a5,
+        type: 3}
+      propertyPath: trackableTeams.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 639d4bcf01760754680e8b5bac7a95b6,
+        type: 2}
+    - target: {fileID: 458165012443826049, guid: 58cb640c40a0c5949851ebe1574449a5,
+        type: 3}
+      propertyPath: team
+      value: 
+      objectReference: {fileID: 11400000, guid: 6640b509e325bde4fb5856f574a6059d,
+        type: 2}
     - target: {fileID: 698007620990262774, guid: 58cb640c40a0c5949851ebe1574449a5,
         type: 3}
       propertyPath: m_RootOrder
@@ -1808,6 +1830,12 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2776
       objectReference: {fileID: 0}
+    - target: {fileID: 3426724973377696234, guid: 58cb640c40a0c5949851ebe1574449a5,
+        type: 3}
+      propertyPath: team
+      value: 
+      objectReference: {fileID: 11400000, guid: 6640b509e325bde4fb5856f574a6059d,
+        type: 2}
     - target: {fileID: 8668052451973642005, guid: 58cb640c40a0c5949851ebe1574449a5,
         type: 3}
       propertyPath: m_IsActive
