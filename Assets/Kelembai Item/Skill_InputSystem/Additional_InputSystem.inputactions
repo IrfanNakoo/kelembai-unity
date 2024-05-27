@@ -1,0 +1,85 @@
+{
+    "name": "Additional_InputSystem",
+    "maps": [
+        {
+            "name": "Skill",
+            "id": "a0fb37e0-4593-44df-b677-b208e747c0f1",
+            "actions": [
+                {
+                    "name": "SupportShip",
+                    "type": "Button",
+                    "id": "f996e351-3f81-49db-ba1c-a9d1bc971eb5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "797d86ce-daa9-4930-b19d-cd3b2fd113e5",
+                    "path": "<Keyboard>/m",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "SkillControl",
+                    "action": "SupportShip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "weapon",
+            "id": "f3044b7b-7e0a-428d-a0ff-dc2a01501bd9",
+            "actions": [
+                {
+                    "name": "Tertier Weapon",
+                    "type": "Button",
+                    "id": "40f30849-406d-4a19-832a-02db5f75a86c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e369c411-a1c8-4062-a23e-72cb2a9e73eb",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "Press",
+                    "processors": "",
+                    "groups": "Weapon",
+                    "action": "Tertier Weapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "SkillControl",
+            "bindingGroup": "SkillControl",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "Weapon",
+            "bindingGroup": "Weapon",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
