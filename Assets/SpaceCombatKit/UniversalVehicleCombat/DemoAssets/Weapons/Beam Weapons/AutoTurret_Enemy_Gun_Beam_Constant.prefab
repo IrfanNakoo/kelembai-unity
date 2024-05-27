@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 20, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6114738084469573440}
   m_RootOrder: 2
@@ -56,6 +57,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0.000000119209275, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 5.2, z: 0}
   m_LocalScale: {x: 1, y: 0.99999994, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6108285234143450128}
   - {fileID: 2887859289003980524}
@@ -88,6 +90,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6108283112443739748}
   m_Father: {fileID: 6114738084469573440}
@@ -120,6 +123,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6114738084469573440}
   m_RootOrder: 1
@@ -162,6 +166,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 690352341698510489}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Detonate
         m_Mode: 1
         m_Arguments:
@@ -204,6 +209,7 @@ Transform:
   m_LocalRotation: {x: -0, y: 0.000000119209275, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.0001233779, z: 0.0457}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7765973649727030010}
   m_Father: {fileID: 6108019785176777060}
@@ -235,6 +241,7 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0.005595515, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6108019785176777060}
   m_Father: {fileID: 6114634123641719962}
@@ -277,6 +284,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6114634123641719962}
   - {fileID: 6114670724997942120}
@@ -338,6 +346,7 @@ MonoBehaviour:
   attachmentItems: []
   parentAttachmentItems: 0
   setChildLayers: 1
+  deactivateGameObjectOnRemovedFromMount: 0
   onMounted:
     m_PersistentCalls:
       m_Calls: []
@@ -520,14 +529,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectableTeams:
-  - {fileID: 11400000, guid: db9c6365835e2014aad79d9a779edefc, type: 2}
+  - {fileID: 11400000, guid: f6183930511df324ca41846a92df975f, type: 2}
   selectableTypes:
   - {fileID: 11400000, guid: caacad2eeb66570498913e5edae6cf4a, type: 2}
   - {fileID: 11400000, guid: 1304e025fde5b3b41926f03c71239e02, type: 2}
-  - {fileID: 0}
-  - {fileID: 11400000, guid: 948e4d6725f498a4db069416651744d7, type: 2}
-  - {fileID: 11400000, guid: 948e4d6725f498a4db069416651744d7, type: 2}
-  maxDepth: 0
+  defaultDepth: -1
   selectHighestDepthChild: 0
   scanEveryFrame: 1
   defaultToFrontMostTarget: 1
@@ -547,7 +553,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6112014114926608044}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f8e074ba7a2424c46bd4665dff58d6d9, type: 3}
   m_Name: 
@@ -559,7 +565,6 @@ MonoBehaviour:
     m_Center: {x: 0, y: 4.04, z: 0.3}
     m_Extent: {x: 6.45, y: 4.02, z: 6.83}
   m_Rigidbody: {fileID: 0}
-  isRootTrackable: 1
   activated: 1
   ignoreTrackingDistance: 0
   registrationOrder: 0
@@ -631,6 +636,9 @@ MonoBehaviour:
   isDamageable: 1
   isHealable: 1
   onCollisionEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &690352341698510489
@@ -706,6 +714,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.81532335, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6114738084469573440}
   m_RootOrder: 3
