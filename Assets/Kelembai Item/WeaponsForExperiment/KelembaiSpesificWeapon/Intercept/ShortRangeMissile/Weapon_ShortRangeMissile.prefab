@@ -175,8 +175,8 @@ MonoBehaviour:
   description: Short Range MIssile
   m_ID: ShortMissileWeapon
   sprites:
-  - {fileID: 21300000, guid: afc164cf759c2744baac40596cb54496, type: 3}
-  - {fileID: 21300000, guid: b263a8ed434e4f545bf5ef2657565e93, type: 3}
+  - {fileID: 21300000, guid: 7d8476e3767de9445a6aaa036e0299a7, type: 3}
+  - {fileID: 21300000, guid: 009311518cfd9ec42abfc611dfb6e100, type: 3}
   moduleType: {fileID: 11400000, guid: 5db9ac5656eabbe4daa5e4bb277f77eb, type: 2}
   attachmentItems: []
   parentAttachmentItems: 0
@@ -279,6 +279,7 @@ MonoBehaviour:
   lockingEnabled: 1
   lockingTime: 0
   lockingAngle: 30
+  ignoreLockingAngleDistance: 0
   lockingRange: 800
   lockingReferenceTransform: {fileID: 4474312126080030}
   startingLockStateForNewTarget: 0
