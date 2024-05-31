@@ -82912,7 +82912,7 @@ MonoBehaviour:
   changeRate: 0.5
   startAmount: 8
   emptiedPause: 1
-  fillToCapacityAfterEmptiedPause: 1
+  fillToCapacityAfterEmptiedPause: 0
   filledPause: 0
   emptyAfterFilledPause: 0
 --- !u!1 &7433102590883418019
@@ -85243,8 +85243,8 @@ MonoBehaviour:
   startingHealth: 2500
   isDamageable: 1
   isHealable: 1
-  canHealAfterDestroyed: 0
-  disableGameObjectOnDestroyed: 1
+  canHealAfterDestroyed: 1
+  disableGameObjectOnDestroyed: 0
   restoreOnEnable: 1
   applyImpulseDamageFactor: 0
   collisionImpulseToDamageFactor: 0.5

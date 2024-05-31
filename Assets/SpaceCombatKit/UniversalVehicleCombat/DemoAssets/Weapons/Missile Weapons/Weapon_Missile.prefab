@@ -28,6 +28,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.299, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6548696875302553008}
   m_RootOrder: 0
@@ -51,6 +52,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -112,6 +114,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1557023041064546776}
   - {fileID: 6548696875302553008}
@@ -151,7 +154,6 @@ MonoBehaviour:
   - resourceContainer: {fileID: 114655263114597250}
     unitResourceChange: -1
     perSecond: 0
-    setEmptyWhenInsufficient: 1
   onFiringFail:
     m_PersistentCalls:
       m_Calls: []
@@ -179,6 +181,7 @@ MonoBehaviour:
   attachmentItems: []
   parentAttachmentItems: 0
   setChildLayers: 1
+  deactivateGameObjectOnRemovedFromMount: 0
   onMounted:
     m_PersistentCalls:
       m_Calls: []
@@ -276,6 +279,7 @@ MonoBehaviour:
   lockingEnabled: 1
   lockingTime: 3
   lockingAngle: 15
+  ignoreLockingAngleDistance: 0
   lockingRange: 1000
   lockingReferenceTransform: {fileID: 4474312126080030}
   startingLockStateForNewTarget: 0
@@ -361,6 +365,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1512236008279915053}
   - {fileID: 2563896009803000763}
@@ -395,6 +400,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.156, z: 0.04}
   m_LocalScale: {x: 0.05, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6548696875302553008}
   m_RootOrder: 2
@@ -418,6 +424,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -474,6 +481,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4740784087454078}
   - {fileID: 577058868006320243}
@@ -509,6 +517,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4505544340778113089}
   m_RootOrder: 1
@@ -662,6 +671,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.05, z: 0}
   m_LocalScale: {x: 0.2, y: 0.1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6548696875302553008}
   m_RootOrder: 1
@@ -685,6 +695,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -743,6 +754,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4505544340778113089}
   m_RootOrder: 0
@@ -952,6 +964,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75be99ff88282414597f64874c6a77b7, type: 3}
+--- !u!4 &1557023041064546776 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1714800313580402312, guid: 75be99ff88282414597f64874c6a77b7,
+    type: 3}
+  m_PrefabInstance: {fileID: 168772803266348880}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6608487782262138603 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6476608816863404475, guid: 75be99ff88282414597f64874c6a77b7,
@@ -964,9 +982,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67954847cb95dee42916d460bafed368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1557023041064546776 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1714800313580402312, guid: 75be99ff88282414597f64874c6a77b7,
-    type: 3}
-  m_PrefabInstance: {fileID: 168772803266348880}
-  m_PrefabAsset: {fileID: 0}

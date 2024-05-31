@@ -438,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 3622239738356602429, guid: a33cbc006d202f4428ef0e73fc47643f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1386
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 3622239738356602429, guid: a33cbc006d202f4428ef0e73fc47643f,
         type: 3}
@@ -1635,7 +1635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824302213}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1750}
+  m_LocalPosition: {x: 0, y: 0, z: -25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1783,7 +1783,7 @@ PrefabInstance:
     - target: {fileID: 698007620990262774, guid: 58cb640c40a0c5949851ebe1574449a5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -636.879
+      value: -2033
       objectReference: {fileID: 0}
     - target: {fileID: 698007620990262774, guid: 58cb640c40a0c5949851ebe1574449a5,
         type: 3}
@@ -1825,6 +1825,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ally Capital need help
       objectReference: {fileID: 0}
+    - target: {fileID: 698007621395068470, guid: 58cb640c40a0c5949851ebe1574449a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2376
+      objectReference: {fileID: 0}
     - target: {fileID: 1353478960021175633, guid: 58cb640c40a0c5949851ebe1574449a5,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1836,6 +1841,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6640b509e325bde4fb5856f574a6059d,
         type: 2}
+    - target: {fileID: 3426724973377696235, guid: 58cb640c40a0c5949851ebe1574449a5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2410
+      objectReference: {fileID: 0}
     - target: {fileID: 8668052451973642005, guid: 58cb640c40a0c5949851ebe1574449a5,
         type: 3}
       propertyPath: m_IsActive

@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.08045985, w: 0.99675786}
   m_LocalPosition: {x: 5.054, y: -0.566, z: -2.574}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6124966950574215335}
   - {fileID: 1508223176386270283}
@@ -62,6 +63,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7474227673004055215}
   - {fileID: 7859241623965802551}
@@ -101,7 +103,6 @@ MonoBehaviour:
   - resourceContainer: {fileID: 6833846526669762669}
     unitResourceChange: -20
     perSecond: 1
-    setEmptyWhenInsufficient: 1
   onFiringFail:
     m_PersistentCalls:
       m_Calls: []
@@ -130,6 +131,7 @@ MonoBehaviour:
   - {fileID: 7859241623965802551}
   parentAttachmentItems: 0
   setChildLayers: 1
+  deactivateGameObjectOnRemovedFromMount: 0
   onMounted:
     m_PersistentCalls:
       m_Calls: []
@@ -208,10 +210,10 @@ MonoBehaviour:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
   capacity: 100
-  changeRate: 20
+  changeRate: 10
   startAmount: 100
   emptiedPause: 1
-  fillToCapacityAfterEmptiedPause: 1
+  fillToCapacityAfterEmptiedPause: 0
   filledPause: 0
   emptyAfterFilledPause: 0
 --- !u!1 &7471934746334268441
@@ -240,6 +242,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.08045985, w: 0.99675786}
   m_LocalPosition: {x: -5.054, y: -0.566, z: -2.574}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6995860680160819732}
   - {fileID: 6677771862401671261}
@@ -346,12 +349,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9214d9b174f51184882a046d265223b6, type: 3}
---- !u!4 &6677771862401671261 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7785591892234213116, guid: 9214d9b174f51184882a046d265223b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 3505995906707420833}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5600949429123291904 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9015464727045139873, guid: 9214d9b174f51184882a046d265223b6,
@@ -364,6 +361,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b2a9941d59e91458b9206565369c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &6677771862401671261 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7785591892234213116, guid: 9214d9b174f51184882a046d265223b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3505995906707420833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!120 &6767231049831628507 stripped
 LineRenderer:
   m_CorrespondingSourceObject: {fileID: 7876167353978964090, guid: 9214d9b174f51184882a046d265223b6,
@@ -615,12 +618,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9214d9b174f51184882a046d265223b6, type: 3}
---- !u!4 &1508223176386270283 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7785591892234213116, guid: 9214d9b174f51184882a046d265223b6,
-    type: 3}
-  m_PrefabInstance: {fileID: 8711565246450090679}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &430356584952835862 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9015464727045139873, guid: 9214d9b174f51184882a046d265223b6,
@@ -633,6 +630,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b2a9941d59e91458b9206565369c03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1508223176386270283 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7785591892234213116, guid: 9214d9b174f51184882a046d265223b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8711565246450090679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!120 &1560627103940610765 stripped
 LineRenderer:
   m_CorrespondingSourceObject: {fileID: 7876167353978964090, guid: 9214d9b174f51184882a046d265223b6,
