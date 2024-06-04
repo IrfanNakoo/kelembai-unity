@@ -26,6 +26,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: 0.08045985, w: 0.99675786}
   m_LocalPosition: {x: -5.054, y: -0.566, z: -2.574}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4756369446676485608}
   - {fileID: 5835719946290690979}
@@ -62,6 +63,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3323274653113429699}
   - {fileID: 5938850887759943764}
@@ -208,10 +210,10 @@ MonoBehaviour:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
   capacity: 30
-  changeRate: 8
+  changeRate: 0
   startAmount: 30
-  emptiedPause: 0
-  fillToCapacityAfterEmptiedPause: 0
+  emptiedPause: 3
+  fillToCapacityAfterEmptiedPause: 1
   filledPause: 0
   emptyAfterFilledPause: 0
 --- !u!1 &5944103410486435846
@@ -240,6 +242,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: -0.08045985, w: 0.99675786}
   m_LocalPosition: {x: 5.054, y: -0.566, z: -2.574}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3814023136312290424}
   - {fileID: 2141828142032608001}
@@ -336,18 +339,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5239f83bddb2c64687b04a1b8233e54, type: 3}
---- !u!1 &3117034021176313975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3396322263012494210, guid: a5239f83bddb2c64687b04a1b8233e54,
-    type: 3}
-  m_PrefabInstance: {fileID: 316312968219968501}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5835719946290690979 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6097698698304206934, guid: a5239f83bddb2c64687b04a1b8233e54,
-    type: 3}
-  m_PrefabInstance: {fileID: 316312968219968501}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &108077850886300739 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 368236118198691766, guid: a5239f83bddb2c64687b04a1b8233e54,
@@ -360,6 +351,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67954847cb95dee42916d460bafed368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3117034021176313975 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3396322263012494210, guid: a5239f83bddb2c64687b04a1b8233e54,
+    type: 3}
+  m_PrefabInstance: {fileID: 316312968219968501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &3636185920445519004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +374,12 @@ MonoBehaviour:
   settingsList:
   - cameraView: {fileID: 11400000, guid: f1d8dae701e24b64e8643566bf85f6a7, type: 2}
     scale: 2
+--- !u!4 &5835719946290690979 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6097698698304206934, guid: a5239f83bddb2c64687b04a1b8233e54,
+    type: 3}
+  m_PrefabInstance: {fileID: 316312968219968501}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3703252644211362707
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -642,12 +645,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5239f83bddb2c64687b04a1b8233e54, type: 3}
---- !u!1 &7351005898361088213 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3396322263012494210, guid: a5239f83bddb2c64687b04a1b8233e54,
-    type: 3}
-  m_PrefabInstance: {fileID: 5270950924242740055}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2141828142032608001 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6097698698304206934, guid: a5239f83bddb2c64687b04a1b8233e54,
@@ -666,6 +663,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67954847cb95dee42916d460bafed368, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &7351005898361088213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3396322263012494210, guid: a5239f83bddb2c64687b04a1b8233e54,
+    type: 3}
+  m_PrefabInstance: {fileID: 5270950924242740055}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5415022495997900144
 MonoBehaviour:
   m_ObjectHideFlags: 0
