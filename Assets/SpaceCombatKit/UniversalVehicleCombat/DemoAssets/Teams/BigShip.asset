@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8a4a5fb6aebb84097c4cc2e6b533f7, type: 3}
   m_Name: BigShip
   m_EditorClassIdentifier: 
-  defaultColor: {r: 1, g: 0.9830701, b: 0.254902, a: 1}
+  defaultColor: {r: 0, g: 1, b: 0.008938551, a: 1}
   sprites: []
   hostileTeams:
   - {fileID: 11400000, guid: f6183930511df324ca41846a92df975f, type: 2}

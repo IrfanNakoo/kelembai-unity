@@ -989,7 +989,7 @@ MonoBehaviour:
   healthCapacity: 2500
   startingHealth: 2500
   isDamageable: 1
-  isHealable: 1
+  isHealable: 0
   canHealAfterDestroyed: 0
   disableGameObjectOnDestroyed: 1
   restoreOnEnable: 1
@@ -1422,7 +1422,7 @@ MonoBehaviour:
   loadUnmountedModules: 0
   overrideDamageableDefaultSettings: 0
   isDamageable: 1
-  isHealable: 1
+  isHealable: 0
   onCollisionEnter:
     m_PersistentCalls:
       m_Calls:
@@ -2393,7 +2393,7 @@ MonoBehaviour:
   healthCapacity: 2500
   startingHealth: 2500
   isDamageable: 1
-  isHealable: 1
+  isHealable: 0
   canHealAfterDestroyed: 0
   disableGameObjectOnDestroyed: 1
   restoreOnEnable: 1
