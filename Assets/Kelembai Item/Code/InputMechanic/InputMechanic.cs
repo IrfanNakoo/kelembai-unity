@@ -8,11 +8,12 @@ public class InputMechanic : MonoBehaviour
 {
     public int maxMessage = 25;
     public GameObject chatPanel, textObject;
+    public InputField inputBox;
 
     [SerializeField]
     List<Message> messageList = new List<Message>();
 
-    void Start()
+    void Start() //check barang ad ke tk jee
     {
         if (chatPanel == null)
         {
@@ -26,21 +27,35 @@ public class InputMechanic : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (inputBox.text != "")
         {
-            SendMessageToChat("You pressed the enter key.");
-            Debug.Log("Enter is pressed");
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SendMessageToChat(inputBox.text);
+                inputBox.text = "";
+            }
+        }
+        else
+        {
+            if (!inputBox.isFocused && Input.GetKeyDown(KeyCode.Return))
+            {
+                inputBox.ActivateInputField();
+            }
         }
 
-        /*if (!inputBox.isFocused && Input.GetKeyDown(KeyCode.Return))
+        if (!inputBox.isFocused)
         {
-            inputBox.ActivateInputField();
-        }*/
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                SendMessageToChat("You pressed the enter key.");
+                Debug.Log("Enter is pressed");
+            }
+        }
     }
 
     public void SendMessageToChat(string text)
     {
-        if (chatPanel == null || textObject == null)
+        if (chatPanel == null || textObject == null) //check barang ad ke tk jee
         {
             Debug.LogError("chatPanel or textObject is not assigned.");
             return;
