@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 4106399398457229592}
   - component: {fileID: 4048184927656752231}
   m_Layer: 0
-  m_Name: Scroll View Input
+  m_Name: ScrollView Input(Legacy)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
