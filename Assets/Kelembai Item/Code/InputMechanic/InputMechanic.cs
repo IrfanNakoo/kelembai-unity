@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Include this for TextMeshPro
+using TMPro; // Include this for TextMeshPro //if not just delete this //or you can just ignore
 
 public class InputMechanic : MonoBehaviour
 {
+    public InputField inputBoxLegacy;
+    public static bool isInputActive = false;
+
     public int maxMessage = 25;
     public GameObject chatPanel, textObject;
     public InputField inputBox;
@@ -17,14 +20,32 @@ public class InputMechanic : MonoBehaviour
 
     void Start()
     {
+
+
+        //still checking and fixing {
+
+        // Check and find the chatPanel if not assigned
         if (chatPanel == null)
         {
-            chatPanel = GameObject.FindWithTag("ChatPanel"); // Example: Find by tag
+            Debug.Log("chatPanel is null, attempting to find it with tag 'ChatPanel'.");
+            chatPanel = GameObject.FindWithTag("ChatPanel");
             if (chatPanel == null)
             {
-                Debug.LogError("chatPanel is not assigned in the Inspector and could not be found dynamically.");
+                Debug.LogError("chatPanel is not assigned in the Inspector and could not be found dynamically with the tag 'ChatPanel'.");
+            }
+            else
+            {
+                Debug.Log("chatPanel found with tag 'ChatPanel'.");
             }
         }
+        else
+        {
+            Debug.Log("chatPanel is already assigned in the Inspector.");
+        }
+
+        //still checking and fixing }
+
+
         if (textObject == null)
         {
             Debug.LogError("textObject is not assigned in the Inspector.");
@@ -41,6 +62,18 @@ public class InputMechanic : MonoBehaviour
 
     void Update()
     {
+
+
+
+        //still testing
+        if (inputBoxLegacy != null)
+        {
+            isInputActive = inputBoxLegacy.isFocused;
+        }
+
+
+
+
         if (inputBox != null && inputBox.text != "")
         {
             if (Input.GetKeyDown(KeyCode.Return))
