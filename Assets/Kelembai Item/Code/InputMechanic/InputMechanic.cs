@@ -22,6 +22,7 @@ public class InputMechanic : MonoBehaviour
     {
 
 
+
         //still checking and fixing {
 
         // Check and find the chatPanel if not assigned
@@ -44,6 +45,7 @@ public class InputMechanic : MonoBehaviour
         }
 
         //still checking and fixing }
+
 
 
         if (textObject == null)
