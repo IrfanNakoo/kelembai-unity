@@ -117,6 +117,12 @@ namespace VSX.UniversalVehicleCombat
 
         public UnityEvent onDetonated;
 
+        protected GameAgent owner;
+
+        public UnityEvent onOwnedByPlayer;
+        public UnityEvent onOwnedByAI;
+
+
 
         protected virtual void Reset()
         {
@@ -141,6 +147,46 @@ namespace VSX.UniversalVehicleCombat
             trailRenderers = new List<TrailRenderer>(GetComponentsInChildren<TrailRenderer>(true));
 
             renderers = new List<Renderer>(GetComponentsInChildren<Renderer>(true));
+        }
+
+
+        /// <summary>
+        /// Set the owner of this projectile.
+        /// </summary>
+        /// <param name="owner">The owner.</param>
+        public virtual void SetOwner(GameAgent owner)
+        {
+            this.owner = owner;
+
+            if (owner != null)
+            {
+                if (owner.IsPlayer)
+                {
+                    OnOwnedByPlayer();
+                }
+                else
+                {
+                    OnOwnedByAI();
+                }
+            }
+        }
+
+
+        /// <summary>
+        /// Called when the projectile is owned by the player.
+        /// </summary>
+        protected virtual void OnOwnedByPlayer()
+        {
+            onOwnedByPlayer.Invoke();
+        }
+
+
+        /// <summary>
+        /// Called when the projectile is owned by an AI (non player).
+        /// </summary>
+        protected virtual void OnOwnedByAI()
+        {
+            onOwnedByAI.Invoke();
         }
 
 
@@ -375,7 +421,8 @@ namespace VSX.UniversalVehicleCombat
                         Vector3 closestPoint = damageReceiver.GetClosestPoint(transform.position);
 
                         // Implement damage
-                        if (Vector3.Distance(transform.position, closestPoint) < areaEffectRadius)
+                        float distanceFromSource = Vector3.Distance(transform.position, closestPoint);
+                        if (distanceFromSource < areaEffectRadius)
                         {
                             HealthEffectInfo info = new HealthEffectInfo();
                             info.worldPosition = transform.position;
@@ -385,6 +432,7 @@ namespace VSX.UniversalVehicleCombat
                             // Damage
 
                             info.amount = healthModifier.GetDamage(damageReceiver.HealthType) * healthEffectByDistanceCurve.Evaluate(distanceCovered / maxDistance);
+                            info.amount *= areaEffectFalloff.Evaluate(distanceFromSource / areaEffectRadius);
 
                             if (!Mathf.Approximately(info.amount, 0))
                             {
