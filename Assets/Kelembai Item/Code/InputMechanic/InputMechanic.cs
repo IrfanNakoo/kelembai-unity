@@ -1,13 +1,11 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Include this for TextMeshPro //if not just delete this //or you can just ignore
 
 public class InputMechanic : MonoBehaviour
 {
     public InputField inputBoxLegacy;
-    public static bool isInputActive = false;
+    public static bool isInputActive = false; // start mati
 
     public int maxMessage = 25;
     public GameObject chatPanel, textObject;
@@ -16,88 +14,77 @@ public class InputMechanic : MonoBehaviour
     public Color playerMessage, info;
 
     [SerializeField]
-    List<Message> messageList = new List<Message>();
+    private List<Message> messageList = new List<Message>();
 
     void Start()
     {
+        if (inputBoxLegacy != null)
+        {
+            inputBoxLegacy.gameObject.SetActive(false); // start mati
+            isInputActive = false;
+        }
 
-
-
-        //still checking and fixing {
-
-        // Check and find the chatPanel if not assigned
         if (chatPanel == null)
         {
-            Debug.Log("chatPanel is null, attempting to find it with tag 'ChatPanel'.");
             chatPanel = GameObject.FindWithTag("ChatPanel");
             if (chatPanel == null)
             {
-                Debug.LogError("chatPanel is not assigned in the Inspector and could not be found dynamically with the tag 'ChatPanel'.");
-            }
-            else
-            {
-                Debug.Log("chatPanel found with tag 'ChatPanel'.");
+                Debug.LogError("chatPanel is not assigned and could not be found with the tag 'ChatPanel'.");
             }
         }
-        else
-        {
-            Debug.Log("chatPanel is already assigned in the Inspector.");
-        }
-
-        //still checking and fixing }
-
-
 
         if (textObject == null)
         {
-            Debug.LogError("textObject is not assigned in the Inspector.");
+            Debug.LogError("textObject is not assigned.");
         }
+
         if (inputBox == null)
         {
             inputBox = FindObjectOfType<InputField>();
             if (inputBox == null)
             {
-                Debug.LogError("inputBox is not assigned in the Inspector and could not be found dynamically.");
+                Debug.LogError("inputBox is not assigned and could not be found dynamically.");
             }
         }
     }
 
     void Update()
     {
-
-
-
-        //still testing
-        if (inputBoxLegacy != null)
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            isInputActive = inputBoxLegacy.isFocused;
-        }
-        //
-
-
-
-        if (inputBox != null && inputBox.text != "")
-        {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (isInputActive) // kalau ad perkataan
             {
-                SendMessageToChat(inputBox.text, Message.MessageType.playerMessage);
-                inputBox.text = "";
+                if (!string.IsNullOrEmpty(inputBox.text)) // klau ad perkataan dia hantar ke SendMessageToChat
+                {
+                    SendMessageToChat(inputBox.text, Message.MessageType.playerMessage);
+                    inputBox.text = "";
+                }
+                inputBox.DeactivateInputField();
+                isInputActive = false;
+            }
+            else
+            {
+                ToggleInputField(); // kalau tak ada perkataan
             }
         }
-        else
-        {
-            if (inputBox != null && !inputBox.isFocused && Input.GetKeyDown(KeyCode.Return))
-            {
-                inputBox.ActivateInputField();
-            }
-        }
+    }
 
-        if (inputBox != null && !inputBox.isFocused)
+    public void ToggleInputField() // klau tak ada perkataan (dia fikir input box mati)
+    {
+        if (inputBoxLegacy != null) //check wujud ke tk
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            isInputActive = !isInputActive;
+            inputBoxLegacy.gameObject.SetActive(isInputActive);
+
+            if (isInputActive) // kalau mati hidupkan
             {
-                SendMessageToChat("You pressed the enter key.", Message.MessageType.info);
-                Debug.Log("Enter is pressed");
+                inputBoxLegacy.Select();
+                inputBoxLegacy.ActivateInputField();
+            }
+            else // kalau hidup matikan
+            {
+                inputBoxLegacy.DeactivateInputField();
+                inputBoxLegacy.gameObject.SetActive(false);
             }
         }
     }
@@ -119,24 +106,14 @@ public class InputMechanic : MonoBehaviour
         Message newMessage = new Message { text = text };
 
         GameObject newText = Instantiate(textObject, chatPanel.transform);
-        if (newText == null)
+        Text newTextComponent = newText.GetComponent<Text>() ?? newText.GetComponentInChildren<Text>();
+        if (newTextComponent == null)
         {
-            Debug.LogError("Failed to instantiate textObject.");
+            Debug.LogError("No Text component found on the instantiated textObject or its children.");
             return;
         }
 
-        newMessage.textObject = newText.GetComponent<Text>();
-        if (newMessage.textObject == null)
-        {
-            Debug.LogWarning("The instantiated textObject does not have a Text component directly on it. Searching children.");
-            newMessage.textObject = newText.GetComponentInChildren<Text>();
-            if (newMessage.textObject == null)
-            {
-                Debug.LogError("No Text component found on the instantiated textObject or its children.");
-                return;
-            }
-        }
-
+        newMessage.textObject = newTextComponent;
         newMessage.textObject.text = newMessage.text;
         newMessage.textObject.color = MessageTypeColor(messageType);
 
@@ -145,16 +122,7 @@ public class InputMechanic : MonoBehaviour
 
     Color MessageTypeColor(Message.MessageType messageType)
     {
-        Color color = info;
-
-        switch (messageType)
-        {
-            case Message.MessageType.playerMessage:
-                color = playerMessage;
-                break;
-        }
-
-        return color;
+        return messageType == Message.MessageType.playerMessage ? playerMessage : info;
     }
 }
 
@@ -163,8 +131,6 @@ public class Message
 {
     public string text;
     public Text textObject;
-    public MessageType messageType;
-
     public enum MessageType
     {
         playerMessage,
