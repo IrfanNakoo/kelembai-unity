@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.InputSystem;
-using UnityEngine.UI; // Add this directive for InputField
 
 namespace VSX.UniversalVehicleCombat
 {
@@ -12,10 +13,6 @@ namespace VSX.UniversalVehicleCombat
     {
         [Header("Settings")]
         public float lookSensitivity = 0.1f;
-
-        // Input field and activation status
-        public InputField inputBoxLegacy;
-        public static bool isInputActive = false;
 
         protected CharacterInputAsset input;
         protected GeneralInputAsset generalInput;
@@ -50,9 +47,6 @@ namespace VSX.UniversalVehicleCombat
             input.CharacterControls.Jump.performed += ctx => Jump();
             input.CharacterControls.Run.performed += ctx => run = ctx.ReadValue<float>();
             input.CharacterControls.Run.canceled += ctx => run = 0;
-
-            // Toggle input box with Enter key
-            generalInput.GeneralControls.ToggleInput.performed += ctx => ToggleInputBox();
         }
 
         /// <summary>
@@ -90,29 +84,11 @@ namespace VSX.UniversalVehicleCombat
             }
         }
 
-        // Method to toggle the input box activation
-        protected void ToggleInputBox()
-        {
-            if (inputBoxLegacy != null)
-            {
-                if (inputBoxLegacy.isFocused)
-                {
-                    inputBoxLegacy.DeactivateInputField();
-                    isInputActive = false;
-                }
-                else
-                {
-                    inputBoxLegacy.ActivateInputField();
-                    isInputActive = true;
-                }
-            }
-        }
-
         // Update is called once per frame
         protected override void InputUpdate()
         {
             // Check if the input box is active
-            if (isInputActive)
+            if (InputMechanic.isInputActive)
             {
                 return; // Do not move the character if input box is active
             }

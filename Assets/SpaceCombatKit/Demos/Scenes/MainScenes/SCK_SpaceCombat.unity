@@ -2592,6 +2592,11 @@ PrefabInstance:
       objectReference: {fileID: 195148450}
     - target: {fileID: 2397305346440999383, guid: 3d527b3546401a642addd70ecd618d44,
         type: 3}
+      propertyPath: maxMessage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2397305346440999383, guid: 3d527b3546401a642addd70ecd618d44,
+        type: 3}
       propertyPath: textObject
       value: 
       objectReference: {fileID: 7533529521687543734, guid: 1962a3d0f497ed6468849b6265739771,

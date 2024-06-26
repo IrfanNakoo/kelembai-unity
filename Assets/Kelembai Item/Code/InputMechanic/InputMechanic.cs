@@ -7,7 +7,7 @@ public class InputMechanic : MonoBehaviour
     public InputField inputBoxLegacy;
     public static bool isInputActive = false; // start mati
 
-    public int maxMessage = 25;
+    public int maxMessage = 5   ;
     public GameObject chatPanel, textObject;
     public InputField inputBox;
 
@@ -15,6 +15,11 @@ public class InputMechanic : MonoBehaviour
 
     [SerializeField]
     private List<Message> messageList = new List<Message>();
+
+    //incase kalau nk guna
+    private int startGameCallCount = 0;  // Counter for StartGame calls
+    private const int startGameCallLimit = 3;  // Limit for StartGame calls
+    //ad nie
 
     void Start()
     {
@@ -67,6 +72,10 @@ public class InputMechanic : MonoBehaviour
                 ToggleInputField(); // kalau tak ada perkataan
             }
         }
+
+        // Call the method to recognize messages and execute specific functions
+        RecognizeMessages();
+
     }
 
     public void ToggleInputField() // klau tak ada perkataan (dia fikir input box mati)
@@ -124,6 +133,62 @@ public class InputMechanic : MonoBehaviour
     {
         return messageType == Message.MessageType.playerMessage ? playerMessage : info;
     }
+
+
+    //contoh2 function yang dia boleh pakai
+    // New method to recognize messages and run specific functions
+    void RecognizeMessages()
+    {
+        foreach (Message message in messageList)
+        {
+            if (message.text.Contains("start"))
+            {
+                // Run the StartGame function
+                StartGame();
+            }
+            else if (message.text.Contains("stop"))
+            {
+                // Run the StopGame function
+                StopGame();
+            }
+            else if (message.text.Contains("jump"))
+            {
+                // Run the Jump function
+                Jump();
+            }
+            // Add more conditions and functions as needed
+        }
+    }
+
+    void StartGame()
+    {
+        if (startGameCallCount < startGameCallLimit)
+        {
+            Debug.Log("Starting game...");
+            // Implement your start game logic here
+
+            startGameCallCount++;  // Increment the call counter
+        }
+        else
+        {
+            Debug.Log("StartGame has already been called the maximum number of times.");
+        }
+    }
+
+    void StopGame()
+    {
+        Debug.Log("Stopping game...");
+        // Implement your stop game logic here
+    }
+
+    void Jump()
+    {
+        Debug.Log("Jumping...");
+        // Implement your jump logic here
+    }
+
+
+
 }
 
 [System.Serializable]
