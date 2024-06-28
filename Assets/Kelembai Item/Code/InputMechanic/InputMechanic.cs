@@ -16,10 +16,14 @@ public class InputMechanic : MonoBehaviour
     [SerializeField]
     private List<Message> messageList = new List<Message>();
 
+
     //incase kalau nk guna
     private int startGameCallCount = 0;  // Counter for StartGame calls
     private const int startGameCallLimit = 3;  // Limit for StartGame calls
     //ad nie
+
+
+    public GameObject SpawnBoxOne;
 
     void Start()
     {
@@ -141,7 +145,18 @@ public class InputMechanic : MonoBehaviour
     {
         foreach (Message message in messageList)
         {
-            if (message.text.Contains("start"))
+
+
+            //testing area
+            if (message.text.Contains("spawn"))
+            {
+                // Run the StartGame function
+                SpawnStuff();
+            }
+            //
+
+
+            else if (message.text.Contains("start"))
             {
                 // Run the StartGame function
                 StartGame();
@@ -174,6 +189,19 @@ public class InputMechanic : MonoBehaviour
             Debug.Log("StartGame has already been called the maximum number of times.");
         }
     }
+
+
+    //testing area
+    void SpawnStuff()
+    {
+        if (SpawnBoxOne != null && !SpawnBoxOne.activeSelf)
+        {
+            SpawnBoxOne.SetActive(true);
+            Debug.Log("spawning kapal testing");
+        }
+    }
+    //
+
 
     void StopGame()
     {
