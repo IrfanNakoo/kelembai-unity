@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b8a4a5fb6aebb84097c4cc2e6b533f7, type: 3}
-  m_Name: Support
+  m_Name: AllyShip
   m_EditorClassIdentifier: 
   defaultColor: {r: 0, g: 1, b: 0.12291026, a: 0}
+  sprites: []
   hostileTeams:
   - {fileID: 11400000, guid: f6183930511df324ca41846a92df975f, type: 2}
-  - {fileID: 11400000, guid: d744ecabe7f8a2541864948c32925441, type: 2}
-  priorityLevel: 0

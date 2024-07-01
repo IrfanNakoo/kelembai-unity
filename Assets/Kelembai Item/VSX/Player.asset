@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   defaultColor: {r: 1, g: 0, b: 0.9075022, a: 1}
+  sprites: []
   hostileTeams:
-  - {fileID: 11400000, guid: d744ecabe7f8a2541864948c32925441, type: 2}
   - {fileID: 11400000, guid: f6183930511df324ca41846a92df975f, type: 2}
-  priorityLevel: 1

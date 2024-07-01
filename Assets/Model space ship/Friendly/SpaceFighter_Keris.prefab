@@ -85290,6 +85290,7 @@ MonoBehaviour:
   playerMessage: {r: 1, g: 1, b: 1, a: 1}
   info: {r: 0, g: 0.94946814, b: 1, a: 1}
   messageList: []
+  SpawnBoxOne: {fileID: 0}
 --- !u!1 &7992182686213130724
 GameObject:
   m_ObjectHideFlags: 0
