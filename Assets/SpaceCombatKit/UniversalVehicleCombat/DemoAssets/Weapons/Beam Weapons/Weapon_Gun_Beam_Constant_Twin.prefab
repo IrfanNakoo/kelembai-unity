@@ -212,7 +212,7 @@ MonoBehaviour:
   capacity: 100
   changeRate: 10
   startAmount: 100
-  emptiedPause: 1
+  emptiedPause: 0
   fillToCapacityAfterEmptiedPause: 0
   filledPause: 0
   emptyAfterFilledPause: 0

@@ -27,6 +27,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -47,6 +48,6 @@ MonoBehaviour:
     type: 3}
   overrideModuleLabel: 0
   overrideLabel: Label Override
-  description: Twin energy beam weapon.
+  description: High damage twin energy beam weapon.
   sprites:
   - {fileID: 21300000, guid: d1e0335dd79562d40b8ab0095ccdab27, type: 3}

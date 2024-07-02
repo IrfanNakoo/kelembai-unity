@@ -173,11 +173,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
-  capacity: 100
+  capacity: 500
   changeRate: 0
-  startAmount: 100
-  emptiedPause: 5
-  fillToCapacityAfterEmptiedPause: 1
+  startAmount: 500
+  emptiedPause: 0
+  fillToCapacityAfterEmptiedPause: 0
   filledPause: 0
   emptyAfterFilledPause: 0
 --- !u!1001 &4094149151313635602
