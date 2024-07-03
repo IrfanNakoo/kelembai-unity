@@ -173,9 +173,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
-  capacity: 200
+  capacity: 100
   changeRate: 10
-  startAmount: 200
+  startAmount: 100
   emptiedPause: 1
   fillToCapacityAfterEmptiedPause: 0
   filledPause: 1
@@ -325,12 +325,12 @@ PrefabInstance:
     - target: {fileID: 9015464727045139873, guid: 9214d9b174f51184882a046d265223b6,
         type: 3}
       propertyPath: range
-      value: 800
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 9015464727045139873, guid: 9214d9b174f51184882a046d265223b6,
         type: 3}
       propertyPath: healthModifier.defaultDamageValue
-      value: 500
+      value: 1300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9214d9b174f51184882a046d265223b6, type: 3}

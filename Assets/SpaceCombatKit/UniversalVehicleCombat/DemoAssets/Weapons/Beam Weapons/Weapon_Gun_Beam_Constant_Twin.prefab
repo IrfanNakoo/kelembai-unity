@@ -209,10 +209,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
-  capacity: 100
+  capacity: 200
   changeRate: 10
-  startAmount: 100
-  emptiedPause: 0
+  startAmount: 200
+  emptiedPause: 1
   fillToCapacityAfterEmptiedPause: 0
   filledPause: 0
   emptyAfterFilledPause: 0
@@ -346,6 +346,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015464727045139873, guid: 9214d9b174f51184882a046d265223b6,
+        type: 3}
+      propertyPath: range
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9214d9b174f51184882a046d265223b6, type: 3}

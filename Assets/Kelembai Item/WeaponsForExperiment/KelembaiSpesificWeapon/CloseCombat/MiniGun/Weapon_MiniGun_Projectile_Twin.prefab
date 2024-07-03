@@ -221,11 +221,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
-  capacity: 100
+  capacity: 500
   changeRate: 0
-  startAmount: 100
-  emptiedPause: 3
-  fillToCapacityAfterEmptiedPause: 1
+  startAmount: 500
+  emptiedPause: 0
+  fillToCapacityAfterEmptiedPause: 0
   filledPause: 0
   emptyAfterFilledPause: 0
 --- !u!1 &5944103410486435846
@@ -582,7 +582,7 @@ PrefabInstance:
     - target: {fileID: 368236118198691766, guid: a5239f83bddb2c64687b04a1b8233e54,
         type: 3}
       propertyPath: accuracy
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 368236118198691766, guid: a5239f83bddb2c64687b04a1b8233e54,
         type: 3}

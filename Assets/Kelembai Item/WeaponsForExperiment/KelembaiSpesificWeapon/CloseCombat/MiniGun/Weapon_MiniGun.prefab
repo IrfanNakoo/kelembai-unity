@@ -173,9 +173,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
-  capacity: 500
+  capacity: 300
   changeRate: 0
-  startAmount: 500
+  startAmount: 300
   emptiedPause: 0
   fillToCapacityAfterEmptiedPause: 0
   filledPause: 0
@@ -281,7 +281,7 @@ PrefabInstance:
         type: 3}
       propertyPath: projectilePrefab
       value: 
-      objectReference: {fileID: 155368965948563476, guid: 0bb4e8729876d9c429105dc46c1b4f92,
+      objectReference: {fileID: 155368965948563476, guid: c035b5e9efe107242bf47eda332a434f,
         type: 3}
     - target: {fileID: 3396322263012494210, guid: a5239f83bddb2c64687b04a1b8233e54,
         type: 3}

@@ -137,8 +137,8 @@ MonoBehaviour:
   managedLocally: 0
   defaultTriggerIndex: 0
   triggerMode: 2
-  actionInterval: 6
-  burstSize: 0
+  actionInterval: 0.5
+  burstSize: 1
   repeatBurst: 0
   burstInterval: 0.5
   onStartTriggering:
@@ -175,11 +175,11 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
-  capacity: 1000
-  changeRate: 1000
-  startAmount: 1000
+  capacity: 100
+  changeRate: 10
+  startAmount: 100
   emptiedPause: 0
-  fillToCapacityAfterEmptiedPause: 1
+  fillToCapacityAfterEmptiedPause: 0
   filledPause: 0
   emptyAfterFilledPause: 0
 --- !u!1001 &1713246713558258487
@@ -262,12 +262,12 @@ PrefabInstance:
     - target: {fileID: 9015464727045139873, guid: 0263bddc0d9bfc34890c97870aefb0c1,
         type: 3}
       propertyPath: pulseDuration
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9015464727045139873, guid: 0263bddc0d9bfc34890c97870aefb0c1,
         type: 3}
       propertyPath: healthModifier.defaultDamageValue
-      value: 800
+      value: 1800
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0263bddc0d9bfc34890c97870aefb0c1, type: 3}
