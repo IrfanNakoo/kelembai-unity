@@ -172,6 +172,11 @@ public class InputMechanic : MonoBehaviour
                 Jump();
             }
             // Add more conditions and functions as needed
+
+            else
+            {
+                WrongComment();
+            }
         }
     }
 
@@ -199,6 +204,12 @@ public class InputMechanic : MonoBehaviour
             SpawnBoxOne.SetActive(true);
             Debug.Log("spawning kapal testing");
         }
+    }
+
+
+    void WrongComment()
+    {
+        Debug.Log("wrong comment");
     }
     //
 
