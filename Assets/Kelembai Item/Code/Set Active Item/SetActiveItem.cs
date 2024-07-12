@@ -13,11 +13,18 @@ public class SetActiveItem : MonoBehaviour
 
     void Start()
     {
-        // Start the timer
-        timer.StartTimerDelayed(activationDelay);
+        if (timer != null)
+        {
+            // Start the timer with a delay
+            timer.StartTimerDelayed(activationDelay);
 
-        // Add listener for the timer's finished event
-        timer.onTimerFinished.AddListener(ActivateObject);
+            // Add listener for the timer's finished event
+            timer.onTimerFinished.AddListener(ActivateObject);
+        }
+        else
+        {
+            Debug.LogError("Timer is not assigned.");
+        }
     }
 
     // Method to activate the object
@@ -27,6 +34,10 @@ public class SetActiveItem : MonoBehaviour
         {
             objectToActivate.SetActive(true);
             Debug.Log("This GameObject is active in Update.");
+        }
+        else
+        {
+            Debug.LogWarning("Object to activate is not assigned.");
         }
 
         // Call the UnityEvent to notify listeners that activation is complete
@@ -38,6 +49,10 @@ public class SetActiveItem : MonoBehaviour
         if (objectToDeactivate != null)
         {
             objectToDeactivate.SetActive(false);
+        }
+        else
+        {
+            Debug.LogWarning("Object to deactivate is not assigned.");
         }
     }
 }
