@@ -2196,7 +2196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a5b41b8db12ac84c838092c9ddca9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Destroy the portal
+  description: Go to the portal
   onChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2898,12 +2898,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: Portal
       objectReference: {fileID: 0}
+    - target: {fileID: 6006579333077075983, guid: 428086355aaaec44caaa55af4b1462aa,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6006579333595040025, guid: 428086355aaaec44caaa55af4b1462aa,
         type: 3}
       propertyPath: sceneName
-      value: LoadingSceneScreen 1
+      value: SCK_EnemyWavesLvl1Def
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -819424235894264825, guid: 428086355aaaec44caaa55af4b1462aa, type: 3}
+    - {fileID: -825858643030586728, guid: 428086355aaaec44caaa55af4b1462aa, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 428086355aaaec44caaa55af4b1462aa, type: 3}
 --- !u!4 &6679619799310009369 stripped
 Transform:
