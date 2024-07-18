@@ -244,9 +244,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   managedLocally: 0
   defaultTriggerIndex: 1
-  triggerMode: 2
-  actionInterval: 3
-  burstSize: 0
+  triggerMode: 0
+  actionInterval: 1
+  burstSize: 1
   repeatBurst: 0
   burstInterval: 0.5
   onStartTriggering:
@@ -277,8 +277,8 @@ MonoBehaviour:
   lockingFillBar: {fileID: 0}
   disableBarOnNoLock: 0
   lockingEnabled: 1
-  lockingTime: 0
-  lockingAngle: 30
+  lockingTime: 3
+  lockingAngle: 15
   ignoreLockingAngleDistance: 0
   lockingRange: 2000
   lockingReferenceTransform: {fileID: 4474312126080030}
@@ -335,7 +335,7 @@ MonoBehaviour:
   capacity: 20
   changeRate: 0
   startAmount: 20
-  emptiedPause: 0
+  emptiedPause: 5
   fillToCapacityAfterEmptiedPause: 1
   filledPause: 0
   emptyAfterFilledPause: 0

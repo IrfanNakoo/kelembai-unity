@@ -262,7 +262,8 @@ GameObject:
   - component: {fileID: 114906698153286910}
   - component: {fileID: 114499931625191688}
   - component: {fileID: 114094907774580586}
-  - component: {fileID: 3017523526769392692}
+  - component: {fileID: 317963446449967108}
+  - component: {fileID: 7596375440630248789}
   m_Layer: 0
   m_Name: Missile_ForMedium
   m_TagString: Untagged
@@ -316,8 +317,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthModifier:
-    healthModifierType: {fileID: 0}
-    defaultDamageValue: 800
+    healthModifierType: {fileID: 11400000, guid: 377cadcf2927dcb49ad15f2c64982d47,
+      type: 2}
+    defaultDamageValue: 2000
     damageOverrideValues: []
     damageMultiplier: 1
     defaultHealingValue: 0
@@ -383,12 +385,21 @@ MonoBehaviour:
   checkLineOfSight: 1
   collisionScanner: {fileID: 5461742785237716284}
   detonator: {fileID: 114499931625191688}
-  speed: 1000
+  speed: 100
   movementUpdateMode: 1
   disableAfterLifetime: 0
-  lifetime: 5
+  lifetime: 3
   disableAfterDistanceCovered: 0
-  maxDistance: 1500
+  maxDistance: 1000
+  onDetonated:
+    m_PersistentCalls:
+      m_Calls: []
+  onOwnedByPlayer:
+    m_PersistentCalls:
+      m_Calls: []
+  onOwnedByAI:
+    m_PersistentCalls:
+      m_Calls: []
   m_Rigidbody: {fileID: 54057555662210932}
   propulsionType: 0
   force: 500
@@ -396,6 +407,7 @@ MonoBehaviour:
   noLockLifetime: 4
   triggerMode: 1
   triggerDistance: 49
+  leadTargetThreshold: 1000
   steeringPIDController:
     controllerXAxis:
       proportionalCoefficient: 0.05
@@ -414,6 +426,12 @@ MonoBehaviour:
       integralInfluence: 1
   targetLocker: {fileID: 114045265111119580}
   engines: {fileID: 114906698153286910}
+  onTargetLocked:
+    m_PersistentCalls:
+      m_Calls: []
+  onTargetLockLost:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5461742785237716284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,8 +473,9 @@ MonoBehaviour:
   lockingFillBar: {fileID: 0}
   disableBarOnNoLock: 0
   lockingEnabled: 0
-  lockingTime: 0
-  lockingAngle: 30
+  lockingTime: 3
+  lockingAngle: 25
+  ignoreLockingAngleDistance: 100
   lockingRange: 1000
   lockingReferenceTransform: {fileID: 4106589916852744}
   startingLockStateForNewTarget: 0
@@ -501,6 +520,9 @@ MonoBehaviour:
   minMovementInputs: {x: -1, y: -1, z: -0.1}
   maxMovementInputs: {x: 1, y: 1, z: 1}
   steeringInputModifiers: {x: 1, y: 1, z: 1}
+  steeringModulators: []
+  movementModulators: []
+  boostModulators: []
   m_rigidbody: {fileID: 54057555662210932}
   maxMovementForces: {x: 0, y: 0, z: 1250}
   maxSteeringForces: {x: 50, y: 50, z: 50}
@@ -651,122 +673,39 @@ MonoBehaviour:
   onPostOriginShift:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3017523526769392692
+--- !u!114 &317963446449967108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1484232227335732}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4973c0b44a155214f814560fd4f2e27b, type: 3}
+  m_Script: {fileID: 11500000, guid: 2dde0da4474c3a441ad881f58348822f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthModifier:
-    healthModifierType: {fileID: 0}
-    defaultDamageValue: 500
-    damageOverrideValues: []
-    damageMultiplier: 1
-    defaultHealingValue: 0
-    healingOverrideValues: []
-    healingMultiplier: 1
-  healthEffectByDistanceCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  defaultHitEffectPrefabs: []
-  spawnDefaultHitEffectsOnDetonation: 1
-  hitEffectOverrides: []
-  areaEffect: 1
-  areaEffectRadius: 50
-  areaEffectFalloff:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: -1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  ignoreTriggerColliders: 1
-  areaEffectLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  checkLineOfSight: 1
-  collisionScanner: {fileID: 5461742785237716284}
-  detonator: {fileID: 114499931625191688}
-  speed: 100
-  movementUpdateMode: 1
-  disableAfterLifetime: 0
-  lifetime: 3
-  disableAfterDistanceCovered: 0
-  maxDistance: 1000
-  m_Rigidbody: {fileID: 54057555662210932}
-  propulsionType: 0
-  force: 500
-  setKinematicOnCollision: 1
-  noLockLifetime: 4
-  triggerMode: 1
-  triggerDistance: 49
-  steeringPIDController:
-    controllerXAxis:
-      proportionalCoefficient: 0.01
-      integralCoefficient: 0
-      derivativeCoefficient: 0
-      integralInfluence: 1
-    controllerYAxis:
-      proportionalCoefficient: 0.01
-      integralCoefficient: 0
-      derivativeCoefficient: 0
-      integralInfluence: 1
-    controllerZAxis:
-      proportionalCoefficient: 0.01
-      integralCoefficient: 0
-      derivativeCoefficient: 0
-      integralInfluence: 1
+  spawnOnEnable: 0
+  usePoolManager: 1
+  objectsToSpawn:
+  - {fileID: 0}
+  spawnTransform: {fileID: 4106589916852744}
+  parentToSpawnTransform: 0
+  scale: 14
+--- !u!114 &7596375440630248789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484232227335732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 569eb53d8b4abf444b2da842ebfa2fe8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  missile: {fileID: 114418243159451540}
   targetLocker: {fileID: 114045265111119580}
-  engines: {fileID: 114906698153286910}
-  maxSwarmAmount: 20
-  swarmFadeDistance: 100
-  swarmFrequency: 2
-  guidanceSteeringPower: 5
-  swarmFadeTime: 5
 --- !u!1 &1549836998667386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +996,7 @@ GameObject:
   - component: {fileID: 2306499313556438593}
   - component: {fileID: 849278372822973204}
   - component: {fileID: 458318253644508517}
+  - component: {fileID: 2738021077810330519}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Untagged
@@ -5858,6 +5798,114 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!96 &2738021077810330519
+TrailRenderer:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1610220366385372809}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 0
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Time: 5
+  m_Parameters:
+    serializedVersion: 3
+    widthMultiplier: 2
+    widthCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.10877192
+        value: 0.5139074
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    colorGradient:
+      serializedVersion: 2
+      key0: {r: 1, g: 0.62674534, b: 0, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 1}
+      key2: {r: 0, g: 0, b: 0, a: 0}
+      key3: {r: 0, g: 0, b: 0, a: 0}
+      key4: {r: 0, g: 0, b: 0, a: 0}
+      key5: {r: 0, g: 0, b: 0, a: 0}
+      key6: {r: 0, g: 0, b: 0, a: 0}
+      key7: {r: 0, g: 0, b: 0, a: 0}
+      ctime0: 0
+      ctime1: 65535
+      ctime2: 0
+      ctime3: 0
+      ctime4: 0
+      ctime5: 0
+      ctime6: 0
+      ctime7: 0
+      atime0: 0
+      atime1: 65535
+      atime2: 0
+      atime3: 0
+      atime4: 0
+      atime5: 0
+      atime6: 0
+      atime7: 0
+      m_Mode: 0
+      m_NumColorKeys: 2
+      m_NumAlphaKeys: 2
+    numCornerVertices: 0
+    numCapVertices: 0
+    alignment: 0
+    textureMode: 1
+    shadowBias: 0
+    generateLightingData: 0
+  m_MinVertexDistance: 0.1
+  m_Autodestruct: 0
+  m_Emitting: 1
 --- !u!1 &4696343074724720598
 GameObject:
   m_ObjectHideFlags: 0
