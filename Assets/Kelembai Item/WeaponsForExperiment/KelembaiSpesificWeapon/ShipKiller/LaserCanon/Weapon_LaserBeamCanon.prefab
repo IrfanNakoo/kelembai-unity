@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labels:
-  - Beam Laser
+  - Laser Beam
   description: Laser beam Canon ShipKiller weapons.
   m_ID: Energy Beam Weapon Constant
   sprites:
@@ -173,9 +173,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
-  capacity: 100
-  changeRate: 100
-  startAmount: 100
+  capacity: 50
+  changeRate: 0
+  startAmount: 50
   emptiedPause: 1
   fillToCapacityAfterEmptiedPause: 0
   filledPause: 1

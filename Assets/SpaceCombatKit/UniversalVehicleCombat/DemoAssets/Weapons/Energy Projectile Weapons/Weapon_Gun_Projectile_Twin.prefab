@@ -83,9 +83,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labels:
-  - Projectile Laser
-  description: Twin laser bolt weapons.
-  m_ID: Energy Projectile Gun
+  - Twin Minigun UP
+  description: Twin Minigun weapons. Upgraded Version
+  m_ID: Space Minigun Gun
   sprites:
   - {fileID: 21300000, guid: 76aca44468fe6e04f9f28b23ba0da6aa, type: 3}
   - {fileID: 21300000, guid: 3c5518559a033b64e9fe384a10cb945c, type: 3}

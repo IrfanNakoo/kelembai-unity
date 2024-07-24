@@ -83,8 +83,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labels:
-  - Projectile Laser
-  description: Twin laser bolt weapons.
+  - Minigun
+  description: normal minigun weapons.
   m_ID: Energy Projectile Gun
   sprites:
   - {fileID: 21300000, guid: 76aca44468fe6e04f9f28b23ba0da6aa, type: 3}
@@ -221,9 +221,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
-  capacity: 500
+  capacity: 300
   changeRate: 0
-  startAmount: 500
+  startAmount: 300
   emptiedPause: 0
   fillToCapacityAfterEmptiedPause: 0
   filledPause: 0

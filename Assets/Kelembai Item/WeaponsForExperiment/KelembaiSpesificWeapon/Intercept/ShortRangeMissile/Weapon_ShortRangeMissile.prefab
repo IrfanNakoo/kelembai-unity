@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labels:
-  - Homing Missile
+  - Short Range Missile
   description: Short Range MIssile
   m_ID: ShortMissileWeapon
   sprites:

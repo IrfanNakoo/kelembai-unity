@@ -171,9 +171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labels:
-  - Homing Missile
-  description: Long Range MIssile
-  m_ID: MissileWeapon
+  - Long Range Missile
+  description: Long Range Missile
+  m_ID: Missile Weapon
   sprites:
   - {fileID: 21300000, guid: 7d8476e3767de9445a6aaa036e0299a7, type: 3}
   - {fileID: 21300000, guid: 009311518cfd9ec42abfc611dfb6e100, type: 3}

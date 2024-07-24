@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labels:
-  - Beam Laser
-  description: Twin laser beam weapons.
+  - Twin Laser Beam
+  description: Twin laser beam weapons. Constant type
   m_ID: Energy Beam Weapon Constant
   sprites:
   - {fileID: 21300000, guid: d1e0335dd79562d40b8ab0095ccdab27, type: 3}
@@ -209,10 +209,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
-  capacity: 200
+  capacity: 150
   changeRate: 10
-  startAmount: 200
-  emptiedPause: 1
+  startAmount: 150
+  emptiedPause: 5
   fillToCapacityAfterEmptiedPause: 0
   filledPause: 0
   emptyAfterFilledPause: 0

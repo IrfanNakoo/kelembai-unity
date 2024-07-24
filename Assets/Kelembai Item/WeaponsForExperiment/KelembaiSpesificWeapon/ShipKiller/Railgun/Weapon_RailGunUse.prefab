@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labels:
-  - Projectile Laser
+  - Big Railgun
   description: Railgun Ship Killer weapons.
   m_ID: Energy Projectile Gun
   sprites:
@@ -135,10 +135,10 @@ MonoBehaviour:
   managedLocally: 0
   defaultTriggerIndex: 1
   triggerMode: 2
-  actionInterval: 1
-  burstSize: 3
-  repeatBurst: 1
-  burstInterval: 0.5
+  actionInterval: 3
+  burstSize: 0
+  repeatBurst: 0
+  burstInterval: 0
   onStartTriggering:
     m_PersistentCalls:
       m_Calls: []
@@ -174,7 +174,7 @@ MonoBehaviour:
       m_Calls: []
   resourceType: {fileID: 11400000, guid: 731b4804bae22a64bbdbb02fa3b343e8, type: 2}
   capacity: 8
-  changeRate: 0.1
+  changeRate: 0
   startAmount: 8
   emptiedPause: 0
   fillToCapacityAfterEmptiedPause: 0

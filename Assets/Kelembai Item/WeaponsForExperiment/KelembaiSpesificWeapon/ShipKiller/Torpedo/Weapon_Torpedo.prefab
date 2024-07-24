@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   labels:
-  - Homing Missile
+  - Torpedo
   description: Big Homing Torpedo.
   m_ID: MissileWeapon
   sprites:
@@ -277,7 +277,7 @@ MonoBehaviour:
   lockingFillBar: {fileID: 0}
   disableBarOnNoLock: 0
   lockingEnabled: 1
-  lockingTime: 0
+  lockingTime: 6
   lockingAngle: 30
   ignoreLockingAngleDistance: 0
   lockingRange: 1500
