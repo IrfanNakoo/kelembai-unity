@@ -22,7 +22,7 @@ EditorBuildSettings:
     guid: dfceb7244c2482b44b879589e5173068
   - enabled: 1
     path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/SCK_TutorTrainingDome.unity
-    guid: 78d4ea1cdee998f4688513c6e49b7694
+    guid: 40890936006a2994b9b9d363d2bdf360
   - enabled: 0
     path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/SCK_CapitalShips.unity
     guid: a0edf0e0fd97caf4d986be0a47435696
