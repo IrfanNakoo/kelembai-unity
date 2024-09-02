@@ -2767,9 +2767,9 @@ MonoBehaviour:
   minVisibleSlots: 2
   slotEmptyIcon: {fileID: 21300000, guid: ebc65d7c1c097ec4190973289812ae0e, type: 3}
   slotIconSpriteIndex: 0
-  mainMenuSceneName: SCK_MainMenu
+  mainMenuSceneName: SCK_MainMenu_S00
   missionSceneNames:
-  - SCK_SpaceCombat
+  - SCK_SpaceCombat_S01
   onVehicleSelectionMode:
     m_PersistentCalls:
       m_Calls: []

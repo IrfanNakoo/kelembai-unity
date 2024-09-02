@@ -122,6 +122,8 @@ namespace VSX.UniversalVehicleCombat
         public UnityEvent onOwnedByPlayer;
         public UnityEvent onOwnedByAI;
 
+        protected List<IGameAgentOwnable> gameAgentOwnables = new List<IGameAgentOwnable>();
+
 
 
         protected virtual void Reset()
@@ -147,6 +149,9 @@ namespace VSX.UniversalVehicleCombat
             trailRenderers = new List<TrailRenderer>(GetComponentsInChildren<TrailRenderer>(true));
 
             renderers = new List<Renderer>(GetComponentsInChildren<Renderer>(true));
+
+            gameAgentOwnables = new List<IGameAgentOwnable>(transform.GetComponentsInChildren<IGameAgentOwnable>());
+
         }
 
 
@@ -168,6 +173,11 @@ namespace VSX.UniversalVehicleCombat
                 {
                     OnOwnedByAI();
                 }
+            }
+
+            for(int i = 0; i < gameAgentOwnables.Count; ++i)
+            {
+                gameAgentOwnables[i].Owner = owner;
             }
         }
 
@@ -254,6 +264,12 @@ namespace VSX.UniversalVehicleCombat
         public virtual float Damage(HealthType healthType)
         {
             return healthModifier.GetDamage(healthType);
+        }
+
+
+        public virtual float Healing(HealthType healthType)
+        {
+            return healthModifier.GetHealing(healthType);
         }
 
 

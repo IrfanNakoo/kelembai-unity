@@ -46,6 +46,7 @@ namespace VSX.UniversalVehicleCombat
             Launching
         }
 
+        [Tooltip("Whether the ship should start in the Landed configuration or the Launched configuration. If set to True, ships positioned above the ground will snap down to the surface.")]
         [SerializeField]
         protected bool startLanded = false;
         public bool StartLanded
@@ -58,12 +59,6 @@ namespace VSX.UniversalVehicleCombat
         public ShipLanderState CurrentState { get { return currentState; } }
 
         protected float currentStateStartTime;
-
-        [Tooltip("The layers for objects the ship can land on.")]
-        [SerializeField]
-        protected LayerMask groundMask;
-
-        public Transform raycastOrigin;
 
         [Header("Launching")]
 
@@ -81,13 +76,30 @@ namespace VSX.UniversalVehicleCombat
 
         [Header("Landing")]
 
+        [Tooltip("Whether the ship will automatically land when it detects a landable surface.")]
+        [SerializeField]
+        protected bool autoLand = false;
+        public virtual bool AutoLand
+        {
+            get { return autoLand; }
+            set { autoLand = value; }
+        }
+
+        [Tooltip("The layers for objects the ship can land on.")]
+        [SerializeField]
+        protected LayerMask groundMask;
+
+        [Tooltip("The transform that represents the origin and direction of the landing raycast.")]
+        [SerializeField]
+        protected Transform landingRaycastOrigin;
+
+        [Tooltip("How far to raycast when looking for a surface to land on.")]
+        [SerializeField]
+        float landingRaycastRange = 25;
+
         [Tooltip("How far above the ground the ship is when it is considered to be on the ground.")]
         [SerializeField]
         protected float landedHeight = 2.5f;
-
-        [Tooltip("How far above the ground the landing animation can be triggered.")]
-        [SerializeField]
-        float minCanLandHeight = 20;
 
         [Tooltip("The height animation curve for landing")]
         [SerializeField]
@@ -124,8 +136,13 @@ namespace VSX.UniversalVehicleCombat
         protected Quaternion endRot;
 
 
+        protected virtual void Reset()
+        {
+            landingRaycastOrigin = transform;
+        }
 
-        private void Start()
+
+        protected virtual void Start()
         {
             if (startLanded)
             {
@@ -137,7 +154,13 @@ namespace VSX.UniversalVehicleCombat
             }
         }
 
-        public void SetState(ShipLanderState newState, bool runEvents = true)
+
+        /// <summary>
+        /// Set the ship lander's state with optional running of events.
+        /// </summary>
+        /// <param name="newState">The new ship lander state.</param>
+        /// <param name="runEvents">Whether to run the events.</param>
+        protected virtual void SetState(ShipLanderState newState, bool runEvents = true)
         {
             switch (newState)
             {
@@ -175,7 +198,10 @@ namespace VSX.UniversalVehicleCombat
 
                     currentState = ShipLanderState.Launching;
 
-                    if (runEvents) onShipLaunching.Invoke();
+                    if (runEvents)
+                    {
+                        onShipLaunching.Invoke();
+                    }
 
                     break;
 
@@ -186,7 +212,7 @@ namespace VSX.UniversalVehicleCombat
         }
 
         // Physics update
-        void FixedUpdate()
+        protected virtual void FixedUpdate()
         {
             switch (currentState)
             {
@@ -233,12 +259,23 @@ namespace VSX.UniversalVehicleCombat
             }
         }
 
+        protected virtual void Update()
+        {
+            if (currentState == ShipLanderState.Launched)
+            {
+                if (autoLand && CheckCanLand())
+                {
+                    Land();
+                }
+            }
+        }
+
 
         /// <summary>
         /// Check if the ship can land.
         /// </summary>
         /// <returns>Whether the ship can land.</returns>
-        public bool CheckCanLand()
+        public virtual bool CheckCanLand()
         {
 
             if (currentState == ShipLanderState.Landed) return false;
@@ -255,10 +292,10 @@ namespace VSX.UniversalVehicleCombat
         }
 
         // Do a raycast check to see if the ship can land.
-        protected bool CheckCanLand(out RaycastHit hit)
+        protected virtual bool CheckCanLand(out RaycastHit hit)
         {
-            Transform origin = raycastOrigin == null ? transform : raycastOrigin;
-            RaycastHit[] hits = Physics.RaycastAll(origin.position, -origin.up, minCanLandHeight, groundMask);
+            Transform origin = landingRaycastOrigin == null ? transform : landingRaycastOrigin;
+            RaycastHit[] hits = Physics.RaycastAll(origin.position, -origin.up, landingRaycastRange, groundMask);
             List<RaycastHit> sortedHits = SortRaycastHitsByDistance(hits);
 
             hit = new RaycastHit();
@@ -276,7 +313,7 @@ namespace VSX.UniversalVehicleCombat
         /// <summary>
         /// Land the ship.
         /// </summary>
-        public void Land()
+        public virtual void Land()
         {
 
             if (currentState != ShipLanderState.Launched) return;
@@ -303,7 +340,7 @@ namespace VSX.UniversalVehicleCombat
         /// <summary>
         /// Launch the ship.
         /// </summary>
-        public void Launch()
+        public virtual void Launch()
         {
             if (currentState != ShipLanderState.Landed) return;
 
@@ -319,8 +356,10 @@ namespace VSX.UniversalVehicleCombat
 
         }
 
-
-        public void SetLanded()
+        /// <summary>
+        /// Set the ship to the landed state
+        /// </summary>
+        public virtual void SetLanded()
         {
             RaycastHit groundHit;
             if (CheckCanLand(out groundHit))
@@ -334,15 +373,18 @@ namespace VSX.UniversalVehicleCombat
             onSetLanded.Invoke();
         }
 
-        public void SetLaunched()
+        /// <summary>
+        /// Set the ship to the launched state
+        /// </summary>
+        public virtual void SetLaunched()
         {
             SetState(ShipLanderState.Launched, false);
 
             onSetLaunched.Invoke();
         }
 
-
-        public List<RaycastHit> SortRaycastHitsByDistance(RaycastHit[] hits)
+        // Sort some raycast hits by order of increasing distance
+        public virtual List<RaycastHit> SortRaycastHitsByDistance(RaycastHit[] hits)
         {
             List<RaycastHit> sortedHits = new List<RaycastHit>();
 

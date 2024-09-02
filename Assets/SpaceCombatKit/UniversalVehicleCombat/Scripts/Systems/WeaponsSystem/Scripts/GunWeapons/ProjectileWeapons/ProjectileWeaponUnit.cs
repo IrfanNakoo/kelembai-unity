@@ -117,6 +117,18 @@ namespace VSX.UniversalVehicleCombat
             }
         }
 
+        public override float Healing(HealthType healthType)
+        {
+            if (projectilePrefab != null)
+            {
+                return projectilePrefab.Healing(healthType);
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
 
         protected override void Reset()
         {

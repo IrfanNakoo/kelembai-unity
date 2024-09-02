@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -113,10 +114,6 @@ namespace VSX.UniversalVehicleCombat
             }
 
 
-            /// <summary>
-            /// Update the animation.
-            /// </summary>
-            /// <param name="animationPosition">The normalised (0-1) animation position.</param>
             public virtual void Update(float animationPosition)
             {
                 emissionModule.enabled = !Mathf.Approximately(animationPosition, 0);
@@ -129,6 +126,40 @@ namespace VSX.UniversalVehicleCombat
         }
 
 
+        /// <summary>
+        /// A transform that is animated as a result of throttle or boost going from 0 - 1.
+        /// </summary>
+        [System.Serializable]
+        public class AnimatedTransform
+        {
+
+            [Tooltip("The transform to animate.")]
+            [SerializeField]
+            protected Transform m_Transform;
+
+            [Tooltip("The scale that the transform has when the control value is 0.")]
+            [SerializeField]
+            protected Vector3 startScale = new Vector3(1, 1, 1);
+
+            [Tooltip("The scale that the transform has when the control value is 1.")]
+            [SerializeField]
+            protected Vector3 endScale = new Vector3(1, 1, 1);
+
+            [Tooltip("The curve for transitioning between start and end values. A linear curve from (0, 0) to (1, 1) is a linear transition from start to end values.")]
+            [SerializeField]
+            protected AnimationCurve curve = AnimationCurve.Linear(0, 0, 1, 1);
+
+
+            /// <summary>
+            /// Called when the control value changes.
+            /// </summary>
+            /// <param name="animationPosition">The animation position (0-1). </param>
+            public virtual void Update(float animationPosition)
+            {
+                float val = curve.Evaluate(animationPosition);
+                m_Transform.localScale = val * endScale + (1 - val) * startScale;
+            }
+        }
 
         [SerializeField]
         protected Engines engines;
@@ -177,6 +208,9 @@ namespace VSX.UniversalVehicleCombat
 
             public List<AnimatedRenderer> animatedRenderers = new List<AnimatedRenderer>();
 
+            public List<AnimatedTransform> animatedTransforms = new List<AnimatedTransform>();
+
+
             public virtual void Initialize()
             {
                 foreach (AnimatedParticle animatedParticle in animatedParticles)
@@ -200,6 +234,11 @@ namespace VSX.UniversalVehicleCombat
                 foreach (AnimatedRenderer animatedRenderer in animatedRenderers)
                 {
                     animatedRenderer.Update(level);
+                }
+
+                foreach (AnimatedTransform animatedTransform in animatedTransforms)
+                {
+                    animatedTransform.Update(level);
                 }
             }
         }
@@ -295,13 +334,32 @@ namespace VSX.UniversalVehicleCombat
             // Calculate thruster level
 
             float level = Mathf.Min((movementAmount + steeringAmount), 1);
+            
 
             foreach (EngineModeAnimationSettings setting in settings)
             {
-                if (setting.mode == EngineMode.All || (setting.mode == EngineMode.Boost && engines.BoostInputs.magnitude >= 0.5f) ||
-                                                        ((setting.mode == EngineMode.Cruising && engines.BoostInputs.magnitude < 0.5f)))
+                switch (setting.mode)
                 {
-                    setting.Update(level);
+                    case EngineMode.All:
+
+                        setting.Update(level);
+                        break;
+
+                    case EngineMode.Cruising:
+
+                        if (engines.BoostInputs.magnitude < 0.5f)
+                        {
+                            setting.Update(level);
+                        }
+                        break;
+
+                    case EngineMode.Boost:
+
+                        if (engines.BoostInputs.magnitude >= 0.5f)
+                        {
+                            setting.Update(1);
+                        }
+                        break;
                 }
             }
         }
