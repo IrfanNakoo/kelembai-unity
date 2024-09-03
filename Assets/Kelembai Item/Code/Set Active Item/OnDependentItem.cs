@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OnOffItem : MonoBehaviour
+public class OnDependentItem : MonoBehaviour
 {
     public GameObject objectToActivate;
     public GameObject dependentObject;
@@ -27,3 +27,5 @@ public class OnOffItem : MonoBehaviour
         }
     }
 }
+
+//code nie gunanya untuk buat object B muncul kalau object A muncul... bukan OnOff

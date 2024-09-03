@@ -5645,12 +5645,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 883a1d8f72e373b4ebbdb90a684033d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &623121578 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1339493551865192, guid: f2744b024e28d8f4a81237e84d4e2949,
-    type: 3}
-  m_PrefabInstance: {fileID: 2006401726}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &644921360
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24479,7 +24473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1617774802
 Transform:
   m_ObjectHideFlags: 0
@@ -48347,28 +48341,15 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1936818119}
-  - component: {fileID: 1936818118}
+  - component: {fileID: 1936818121}
+  - component: {fileID: 1936818122}
   m_Layer: 0
   m_Name: OnOffManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1936818118
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936818117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc84493f163a9024fb8aa0e1205cf9a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToActivate: {fileID: 0}
-  dependentObject: {fileID: 623121578}
+  m_IsActive: 1
 --- !u!4 &1936818119
 Transform:
   m_ObjectHideFlags: 0
@@ -48384,6 +48365,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1936818121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936818117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846ae4112c602194f982fb0233c51551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToActivate: {fileID: 0}
+  objectToDeactivate: {fileID: 0}
+  onActivationComplete:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1936818122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936818117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254f519004c4cc64097afd83cfa44d2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectA: {fileID: 1059452319082446, guid: 4776b56638f845146ab727d2088078a4, type: 3}
+  score: 10
 --- !u!1 &1954044595
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class InputMechanic : MonoBehaviour
     //incase kalau nk guna
     private int startGameCallCount = 0;  // Counter for StartGame calls
     private const int startGameCallLimit = 3;  // Limit for StartGame calls
-    //ad nie
+    //add  nie
 
 
     public GameObject SpawnBoxOne;
