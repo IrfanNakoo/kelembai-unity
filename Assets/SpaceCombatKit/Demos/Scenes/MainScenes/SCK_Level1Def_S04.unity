@@ -169,11 +169,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1478732457}
   objectToDeactivate: {fileID: 1686677130}
-  activationDelay: 6
   onActivationComplete:
     m_PersistentCalls:
       m_Calls: []
-  timer: {fileID: 0}
 --- !u!1 &40594596
 GameObject:
   m_ObjectHideFlags: 0
@@ -2163,7 +2161,7 @@ PrefabInstance:
     - target: {fileID: 6006579333077075980, guid: 428086355aaaec44caaa55af4b1462aa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6006579333077075980, guid: 428086355aaaec44caaa55af4b1462aa,
         type: 3}
@@ -3538,7 +3536,7 @@ PrefabInstance:
     - target: {fileID: 698007620990262774, guid: 58cb640c40a0c5949851ebe1574449a5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 698007620990262774, guid: 58cb640c40a0c5949851ebe1574449a5,
         type: 3}
@@ -3838,11 +3836,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 1158640137}
   objectToDeactivate: {fileID: 1558255992}
-  activationDelay: 5
   onActivationComplete:
     m_PersistentCalls:
       m_Calls: []
-  timer: {fileID: 0}
 --- !u!1001 &933908890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5069,7 +5065,7 @@ PrefabInstance:
     - target: {fileID: 1269196813272611568, guid: 69e4f02c805f4264b8a6a00af5eca06f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1269196813272611568, guid: 69e4f02c805f4264b8a6a00af5eca06f,
         type: 3}
@@ -7951,11 +7947,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectToActivate: {fileID: 311600480}
   objectToDeactivate: {fileID: 1692564112}
-  activationDelay: 8
   onActivationComplete:
     m_PersistentCalls:
       m_Calls: []
-  timer: {fileID: 0}
 --- !u!1 &1947818275
 GameObject:
   m_ObjectHideFlags: 0
