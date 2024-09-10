@@ -19,12 +19,17 @@ public class WorldEvent : MonoBehaviour
     public UnityEvent onApproachingLocation;  // Event when character is approaching
     public UnityEvent onLeftLocation;  // Event when character leaves the location
 
+    private float distanceToTargetX;
+
     void Start()
     {
         // Ensure events are initialized if not set in the Inspector
         if (onLocationReached == null) onLocationReached = new UnityEvent();
         if (onApproachingLocation == null) onApproachingLocation = new UnityEvent();
         if (onLeftLocation == null) onLeftLocation = new UnityEvent();
+
+        // Start the coroutine to log distance every second
+        StartCoroutine(LogDistanceEverySecond());
     }
 
     void Update()
@@ -37,8 +42,7 @@ public class WorldEvent : MonoBehaviour
         }
 
         // Calculate the distance on the X-axis between CharacterA and TargetLocation
-        float distanceToTargetX = Mathf.Abs(characterA.position.x - targetLocation.position.x);
-        Debug.Log("Distance to Target on X-axis: " + distanceToTargetX);
+        distanceToTargetX = Mathf.Abs(characterA.position.x - targetLocation.position.x);
 
         // Check if the character is within the reach radius
         if (distanceToTargetX <= reachRadius && !locationReached)
@@ -65,6 +69,16 @@ public class WorldEvent : MonoBehaviour
         else if (distanceToTargetX > approachRadius && isApproaching)
         {
             isApproaching = false;  // Reset approaching state
+        }
+    }
+
+    // Coroutine to log the distance every second
+    IEnumerator LogDistanceEverySecond()
+    {
+        while (true)
+        {
+            Debug.Log("Distance to Target on X-axis: " + distanceToTargetX);
+            yield return new WaitForSeconds(1f);  // Wait for 1 second
         }
     }
 }

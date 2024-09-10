@@ -15114,10 +15114,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startLanded: 0
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  raycastOrigin: {fileID: 0}
   launchHeight: 20
   launchCurve:
     serializedVersion: 2
@@ -15144,8 +15140,13 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   launchTime: 2
+  autoLand: 0
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  landingRaycastOrigin: {fileID: 0}
+  landingRaycastRange: 25
   landedHeight: 2.75
-  minCanLandHeight: 25
   landCurve:
     serializedVersion: 2
     m_Curve:
@@ -22351,6 +22352,7 @@ MonoBehaviour:
           m_NumColorKeys: 2
           m_NumAlphaKeys: 2
       shaderFloatSettings: []
+    animatedTransforms: []
   - mode: 2
     animatedParticles:
     - particleSystem: {fileID: 1149507203689679471}
@@ -22537,6 +22539,7 @@ MonoBehaviour:
           m_NumColorKeys: 2
           m_NumAlphaKeys: 2
       shaderFloatSettings: []
+    animatedTransforms: []
 --- !u!1 &3728445504143836133
 GameObject:
   m_ObjectHideFlags: 0
@@ -78635,6 +78638,7 @@ MonoBehaviour:
           m_NumColorKeys: 2
           m_NumAlphaKeys: 2
       shaderFloatSettings: []
+    animatedTransforms: []
   - mode: 2
     animatedParticles:
     - particleSystem: {fileID: 6060980708602845925}
@@ -78821,6 +78825,7 @@ MonoBehaviour:
           m_NumColorKeys: 2
           m_NumAlphaKeys: 2
       shaderFloatSettings: []
+    animatedTransforms: []
 --- !u!1 &6340098025056803632
 GameObject:
   m_ObjectHideFlags: 0
@@ -87000,6 +87005,7 @@ MonoBehaviour:
           m_NumColorKeys: 2
           m_NumAlphaKeys: 2
       shaderFloatSettings: []
+    animatedTransforms: []
   - mode: 2
     animatedParticles:
     - particleSystem: {fileID: 6060980708990080661}
@@ -87186,6 +87192,7 @@ MonoBehaviour:
           m_NumColorKeys: 2
           m_NumAlphaKeys: 2
       shaderFloatSettings: []
+    animatedTransforms: []
 --- !u!1 &7701761349199773272
 GameObject:
   m_ObjectHideFlags: 0
@@ -88721,6 +88728,7 @@ MonoBehaviour:
           m_NumColorKeys: 2
           m_NumAlphaKeys: 2
       shaderFloatSettings: []
+    animatedTransforms: []
   - mode: 2
     animatedParticles:
     - particleSystem: {fileID: 6060980710310807398}
@@ -88907,6 +88915,7 @@ MonoBehaviour:
           m_NumColorKeys: 2
           m_NumAlphaKeys: 2
       shaderFloatSettings: []
+    animatedTransforms: []
 --- !u!1 &8176006343681803684
 GameObject:
   m_ObjectHideFlags: 0
@@ -92581,7 +92590,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bf67cafd7d4634344b8ee69e7fc71967, type: 2}
+  - {fileID: 2100000, guid: 24ba109c42e96d54ead730d04c56d206, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
