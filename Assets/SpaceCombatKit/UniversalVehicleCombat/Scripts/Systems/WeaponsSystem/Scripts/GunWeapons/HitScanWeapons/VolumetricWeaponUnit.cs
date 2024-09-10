@@ -53,9 +53,12 @@ namespace VSX.UniversalVehicleCombat
 
         public override float Damage(HealthType healthType)
         {
-
             return healthModifier.GetDamage(healthType);
+        }
 
+        public override float Healing(HealthType healthType)
+        {
+            return healthModifier.GetHealing(healthType);
         }
 
         [Header("Events")]

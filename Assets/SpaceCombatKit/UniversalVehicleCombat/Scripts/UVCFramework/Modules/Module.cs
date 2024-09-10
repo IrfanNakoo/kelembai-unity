@@ -84,7 +84,7 @@ namespace VSX.UniversalVehicleCombat
         // Module owner root gameobject set event
         public OnSetRootTransformEventHandler onSetRootTransform;
         protected List<IRootTransformUser> rootTransformUsers = new List<IRootTransformUser>();
-
+        protected List<IGameAgentOwnable> gameAgentOwnables = new List<IGameAgentOwnable>();
 
         [Header("Ownership Events")]
 
@@ -103,6 +103,7 @@ namespace VSX.UniversalVehicleCombat
         protected void Awake()
         {
             rootTransformUsers = new List<IRootTransformUser>(transform.GetComponentsInChildren<IRootTransformUser>());
+            gameAgentOwnables = new List<IGameAgentOwnable>(transform.GetComponentsInChildren<IGameAgentOwnable>());
 
             m_Rigidbody = GetComponent<Rigidbody>();
         }
@@ -135,6 +136,11 @@ namespace VSX.UniversalVehicleCombat
             }
             else
             {
+                for (int i = 0; i < gameAgentOwnables.Count; ++i)
+                {
+                    gameAgentOwnables[i].Owner = gameAgent;
+                }
+
                 if (gameAgent.IsPlayer)
                 {
                     OnOwnedByPlayer();

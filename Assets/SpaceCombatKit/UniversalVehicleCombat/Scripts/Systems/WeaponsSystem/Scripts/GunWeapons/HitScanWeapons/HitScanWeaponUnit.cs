@@ -68,6 +68,11 @@ namespace VSX.UniversalVehicleCombat
             return healthModifier.GetDamage(healthType);
         }
 
+        public override float Healing(HealthType healthType)
+        {
+            return healthModifier.GetHealing(healthType);
+        }
+
         [Tooltip("The amount of damage/healing over the range of the weapon.")]
         [SerializeField]
         protected AnimationCurve effectOverRange = AnimationCurve.Linear(0, 1, 1, 1);

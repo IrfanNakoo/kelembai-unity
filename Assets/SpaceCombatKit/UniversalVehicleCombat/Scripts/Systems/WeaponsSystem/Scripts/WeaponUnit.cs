@@ -67,6 +67,17 @@ namespace VSX.UniversalVehicleCombat
 
 
         /// <summary>
+        /// Get the amount of healing this weapon unit does (typically in hit points per second).
+        /// </summary>
+        /// <param name="healthType">The health type to get healing for.</param>
+        /// <returns>The healing done for a particular health type.</returns>
+        public virtual float Healing(HealthType healthType)
+        {
+            return 0;
+        }
+
+
+        /// <summary>
         /// Get the weapon unit speed.
         /// </summary>
         public virtual float Speed

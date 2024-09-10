@@ -414,6 +414,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "InputMechanic",
+                    "type": "Button",
+                    "id": "5da4525a-dfa0-4776-b300-95ce7cabce70",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -469,6 +478,17 @@
                     "processors": "",
                     "groups": "MouseKeyboard",
                     "action": "Scroll To Tertier",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "725898d6-d979-4ca0-9f85-a60636687e0e",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "MouseKeyboard",
+                    "action": "InputMechanic",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

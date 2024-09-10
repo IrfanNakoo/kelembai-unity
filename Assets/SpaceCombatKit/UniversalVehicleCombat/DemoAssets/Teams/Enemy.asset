@@ -15,4 +15,6 @@ MonoBehaviour:
   defaultColor: {r: 1, g: 0.50065356, b: 0.25098038, a: 1}
   sprites: []
   hostileTeams:
+  - {fileID: 11400000, guid: 6640b509e325bde4fb5856f574a6059d, type: 2}
   - {fileID: 11400000, guid: db9c6365835e2014aad79d9a779edefc, type: 2}
+  - {fileID: 11400000, guid: 639d4bcf01760754680e8b5bac7a95b6, type: 2}

@@ -15,8 +15,14 @@ namespace VSX.UniversalVehicleCombat
     /// <summary>
     /// This class spawns a projectile prefab at a specified interval and with a specified launch velocity.
     /// </summary>
-    public class ProjectileWeaponUnit : WeaponUnit, IRootTransformUser
+    public class ProjectileWeaponUnit : WeaponUnit, IRootTransformUser, IGameAgentOwnable
     {
+        protected GameAgent owner;
+        public GameAgent Owner
+        {
+            get { return owner; }
+            set { owner = value; }
+        }
 
         [Header("Settings")]
 
@@ -111,6 +117,18 @@ namespace VSX.UniversalVehicleCombat
             }
         }
 
+        public override float Healing(HealthType healthType)
+        {
+            if (projectilePrefab != null)
+            {
+                return projectilePrefab.Healing(healthType);
+            }
+            else
+            {
+                return 0;
+            }
+        }
+
 
         protected override void Reset()
         {
@@ -170,6 +188,7 @@ namespace VSX.UniversalVehicleCombat
                     projectileController = GameObject.Instantiate(projectilePrefab, spawnPoint.position, spawnPoint.rotation);
                 }
 
+                projectileController.SetOwner(owner);
                 projectileController.SetSenderRootTransform(rootTransform);
 
                 if (addLauncherVelocityToProjectile && rBody != null)

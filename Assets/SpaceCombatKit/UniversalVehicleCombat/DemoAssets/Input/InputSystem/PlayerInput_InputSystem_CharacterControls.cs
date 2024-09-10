@@ -4,18 +4,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 
-
 namespace VSX.UniversalVehicleCombat
 {
-
     /// <summary>
     /// This class provides an example control script for a character.
     /// </summary>
     public class PlayerInput_InputSystem_CharacterControls : VehicleInput
     {
-
         [Header("Settings")]
-
         public float lookSensitivity = 0.1f;
 
         protected CharacterInputAsset input;
@@ -27,7 +23,6 @@ namespace VSX.UniversalVehicleCombat
         protected GimbalController gimbalController;
         protected FirstPersonCharacterController characterController;
 
-
         private void OnEnable()
         {
             input.Enable();
@@ -37,7 +32,7 @@ namespace VSX.UniversalVehicleCombat
         private void OnDisable()
         {
             input.Disable();
-            generalInput.Enable();
+            generalInput.Disable();
         }
 
         protected override void Awake()
@@ -51,11 +46,8 @@ namespace VSX.UniversalVehicleCombat
             input.CharacterControls.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
             input.CharacterControls.Jump.performed += ctx => Jump();
             input.CharacterControls.Run.performed += ctx => run = ctx.ReadValue<float>();
-            input.CharacterControls.Run.canceled += ctx => run = ctx.ReadValue<float>();
-            //generalInput.GeneralControls.MouseDelta.performed += ctx => look = ctx.ReadValue<Vector2>();
-
+            input.CharacterControls.Run.canceled += ctx => run = 0;
         }
-
 
         /// <summary>
         /// Initialize this input script with a vehicle.
@@ -64,9 +56,9 @@ namespace VSX.UniversalVehicleCombat
         /// <returns>Whether initialization succeeded</returns>
         protected override bool Initialize(Vehicle vehicle)
         {
-
             characterController = vehicle.GetComponent<FirstPersonCharacterController>();
             gimbalController = vehicle.GetComponent<GimbalController>();
+
             if (characterController == null)
             {
                 if (debugInitialization)
@@ -84,7 +76,6 @@ namespace VSX.UniversalVehicleCombat
             return true;
         }
 
-
         protected virtual void Jump()
         {
             if (initialized)
@@ -93,10 +84,15 @@ namespace VSX.UniversalVehicleCombat
             }
         }
 
-
         // Update is called once per frame
         protected override void InputUpdate()
         {
+            // Check if the input box is active
+            if (InputMechanic.isInputActive)
+            {
+                return; // Do not move the character if input box is active
+            }
+
             // Moving
             float horizontal = movement.x;
             float forward = movement.y;

@@ -37,7 +37,7 @@ namespace VSX.ResourceSystem
 
         public virtual bool IsEmpty { get { return false; } }
 
-        public virtual float ChangeRate { get { return 0; } }
+        public virtual float ChangeRate { get { return 0; } set { } }
 
         [Header("Events")]
 

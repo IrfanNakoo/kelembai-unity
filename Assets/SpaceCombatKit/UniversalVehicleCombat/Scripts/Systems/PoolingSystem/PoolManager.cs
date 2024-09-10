@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 
 namespace VSX.Pooling 
@@ -62,6 +63,13 @@ namespace VSX.Pooling
 			{
                 objectPools.Add(pool);
 			}
+
+			SceneManager.activeSceneChanged += OnActiveSceneChanged;
+		}
+
+		void OnActiveSceneChanged(Scene current, Scene next)
+		{
+			Debug.Log(current == null);
 		}
 
 

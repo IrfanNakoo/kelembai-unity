@@ -109,6 +109,26 @@ namespace VSX.UniversalVehicleCombat
 
 
         /// <summary>
+        /// Get the healing performed by this weapon for a specific health type.
+        /// </summary>
+        /// <param name="healthType">The Health Type to get weapon healing for.</param>
+        /// <returns>The total weapon healing.</returns>
+        public virtual float Healing(HealthType healthType)
+        {
+            float healing = 0;
+
+            for (int i = 0; i < weaponUnits.Count; ++i)
+            {
+                healing += weaponUnits[i].Healing(healthType) * (weaponUnits[i].TimeBasedDamageHealing ? 1 : FireRate);
+            }
+
+            if (multiWeaponFiringMode == MultiWeaponFiringMode.Sequential) healing /= weaponUnits.Count == 0 ? 1 : weaponUnits.Count;
+
+            return healing;
+        }
+
+
+        /// <summary>
         /// Get the speed of this weapon.
         /// </summary>
         public virtual float Speed

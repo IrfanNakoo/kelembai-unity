@@ -36,8 +36,10 @@ namespace VSX.ResourceSystem
         protected float changeRate = 25;
         public override float ChangeRate
         {
-            get { return changeRate; }
+            get => changeRate;
+            set => changeRate = value;
         }
+
 
         [Tooltip("The starting amount for this resource container.")]
         [SerializeField]
@@ -56,6 +58,12 @@ namespace VSX.ResourceSystem
         [Tooltip("The pause after the container becomes emptied before it is filled (if this feature is enabled).")]
         [SerializeField]
         protected float emptiedPause = 0;
+        public float EmptiedPause 
+        { 
+            get { return emptiedPause; }
+            set { emptiedPause = value; }
+        }
+
 
         [Tooltip("Whether to fill the container to capacity after it becomes emptied (after the specified pause).")]
         [SerializeField]
@@ -68,6 +76,12 @@ namespace VSX.ResourceSystem
         [Tooltip("The pause after the container becomes filled before it is emptied (if this feature is enabled).")]
         [SerializeField]
         protected float filledPause = 0;
+        public float FilledPause 
+        { 
+            get { return filledPause; }
+            set { filledPause = value; }
+        }
+
 
         [Tooltip("Whether to empty the container after it becomes full (after the specified pause).")]
         [SerializeField]
