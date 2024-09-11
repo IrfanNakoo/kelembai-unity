@@ -19,7 +19,7 @@ public class WorldEvent : MonoBehaviour
     public UnityEvent onApproachingLocation;  // Event when character is approaching
     public UnityEvent onLeftLocation;  // Event when character leaves the location
 
-    private float distanceToTargetX;
+    private float distanceToTargetZ;
 
     void Start()
     {
@@ -42,31 +42,31 @@ public class WorldEvent : MonoBehaviour
         }
 
         // Calculate the distance on the X-axis between CharacterA and TargetLocation
-        distanceToTargetX = Mathf.Abs(characterA.position.x - targetLocation.position.x);
+        distanceToTargetZ = Mathf.Abs(characterA.position.z - targetLocation.position.z);
 
         // Check if the character is within the reach radius
-        if (distanceToTargetX <= reachRadius && !locationReached)
+        if (distanceToTargetZ <= reachRadius && !locationReached)
         {
             locationReached = true;
             isApproaching = false;
             onLocationReached.Invoke();  // Trigger the "reached" event
-            Debug.Log("CharacterA reached the location on the X-axis!");
+            Debug.Log("CharacterA reached the location on the Z-axis!");
         }
-        else if (distanceToTargetX > reachRadius && locationReached)
+        else if (distanceToTargetZ > reachRadius && locationReached)
         {
             locationReached = false;
             onLeftLocation.Invoke();  // Trigger the "left" event
-            Debug.Log("CharacterA left the location on the X-axis!");
+            Debug.Log("CharacterA left the location on the Z-axis!");
         }
 
         // Check if the character is approaching
-        if (distanceToTargetX <= approachRadius && distanceToTargetX > reachRadius && !isApproaching)
+        if (distanceToTargetZ <= approachRadius && distanceToTargetZ > reachRadius && !isApproaching)
         {
             isApproaching = true;
             onApproachingLocation.Invoke();  // Trigger the "approaching" event
-            Debug.Log("CharacterA is approaching the location on the X-axis!");
+            Debug.Log("CharacterA is approaching the location on the Z-axis!");
         }
-        else if (distanceToTargetX > approachRadius && isApproaching)
+        else if (distanceToTargetZ > approachRadius && isApproaching)
         {
             isApproaching = false;  // Reset approaching state
         }
@@ -77,7 +77,7 @@ public class WorldEvent : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log("Distance to Target on X-axis: " + distanceToTargetX);
+            Debug.Log("Distance to Target on Z-axis: " + distanceToTargetZ);
             yield return new WaitForSeconds(1f);  // Wait for 1 second
         }
     }

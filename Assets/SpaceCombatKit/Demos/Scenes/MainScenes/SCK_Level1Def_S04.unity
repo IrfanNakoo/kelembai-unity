@@ -536,7 +536,13 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 877891295}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &229229245
+--- !u!4 &229229246 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 698007620990262774, guid: 58cb640c40a0c5949851ebe1574449a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 877891295}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &229229247
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -548,36 +554,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a5b41b8db12ac84c838092c9ddca9b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: Keep the Mothership Save
+  description: Protect the Mothership
   onChanged:
     m_PersistentCalls:
       m_Calls: []
   onCompleted:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onReset:
     m_PersistentCalls:
       m_Calls: []
   targets:
   - {fileID: 1312346757}
---- !u!4 &229229246 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 698007620990262774, guid: 58cb640c40a0c5949851ebe1574449a5,
-    type: 3}
-  m_PrefabInstance: {fileID: 877891295}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &252919320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1353478960021175633, guid: 58cb640c40a0c5949851ebe1574449a5,
@@ -5065,7 +5053,7 @@ PrefabInstance:
     - target: {fileID: 1269196813272611568, guid: 69e4f02c805f4264b8a6a00af5eca06f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1269196813272611568, guid: 69e4f02c805f4264b8a6a00af5eca06f,
         type: 3}
@@ -8242,8 +8230,8 @@ Transform:
   - {fileID: 9160187105536825991}
   - {fileID: 1183390323}
   - {fileID: 1517996287}
-  - {fileID: 229229246}
   - {fileID: 1628656278}
+  - {fileID: 229229246}
   - {fileID: 1158640141}
   m_Father: {fileID: 853341285}
   m_RootOrder: 2
