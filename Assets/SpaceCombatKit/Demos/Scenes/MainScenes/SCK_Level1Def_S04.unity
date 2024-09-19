@@ -351,6 +351,18 @@ Transform:
   m_Father: {fileID: 666789679}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &78089137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3622239738736169856, guid: a33cbc006d202f4428ef0e73fc47643f,
+    type: 3}
+  m_PrefabInstance: {fileID: 257170853}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7abe7192d77416141a1c2f04770d7686, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &81577345
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,6 +958,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: WaveControllerAlly (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3622239738736169858, guid: a33cbc006d202f4428ef0e73fc47643f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3622239738736169859, guid: a33cbc006d202f4428ef0e73fc47643f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1234,6 +1251,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 2bcaa351a6db1894eb21facfb4a909da,
         type: 2}
+    - target: {fileID: 6990511132099853222, guid: a33cbc006d202f4428ef0e73fc47643f,
+        type: 3}
+      propertyPath: waveControllers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990511132099853222, guid: a33cbc006d202f4428ef0e73fc47643f,
+        type: 3}
+      propertyPath: waveControllers.Array.data[1]
+      value: 
+      objectReference: {fileID: 78089137}
     - target: {fileID: 6990511132099853229, guid: a33cbc006d202f4428ef0e73fc47643f,
         type: 3}
       propertyPath: m_Name
@@ -2149,7 +2176,7 @@ PrefabInstance:
     - target: {fileID: 6006579333077075980, guid: 428086355aaaec44caaa55af4b1462aa,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6006579333077075980, guid: 428086355aaaec44caaa55af4b1462aa,
         type: 3}
@@ -4590,6 +4617,23 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6125793580235343111, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
+        type: 3}
+      propertyPath: compatibleGameStates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125793580235343111, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
+        type: 3}
+      propertyPath: compatibleGameStates.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ba9d69850f0196a4888f57c68e65d00a,
+        type: 2}
+    - target: {fileID: 6125793580235343111, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
+        type: 3}
+      propertyPath: compatibleGameStates.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: ba9d69850f0196a4888f57c68e65d00a,
+        type: 2}
     - target: {fileID: 6667287729411648177, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
         type: 3}
       propertyPath: m_textInfo.lineCount

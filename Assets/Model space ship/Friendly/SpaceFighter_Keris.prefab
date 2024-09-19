@@ -86177,7 +86177,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 318684741332906394}
-        m_TargetAssemblyTypeName: 
+        m_TargetAssemblyTypeName: VSX.UniversalVehicleCombat.Vehicle, Assembly-CSharp
         m_MethodName: Destroy
         m_Mode: 1
         m_Arguments:
