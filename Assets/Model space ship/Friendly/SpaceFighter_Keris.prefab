@@ -15503,7 +15503,7 @@ MonoBehaviour:
   m_rigidbody: {fileID: 6220824307629873455}
   maxMovementForces: {x: 600, y: 600, z: 600}
   maxSteeringForces: {x: 8, y: 8, z: 9}
-  maxBoostForces: {x: 1000, y: 1000, z: 1000}
+  maxBoostForces: {x: 1200, y: 1200, z: 1200}
   movementInputResponseSpeed: 6
   steeringBySpeedCurve:
     serializedVersion: 2
@@ -86177,7 +86177,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 318684741332906394}
-        m_TargetAssemblyTypeName: VSX.UniversalVehicleCombat.Vehicle, Assembly-CSharp
+        m_TargetAssemblyTypeName: 
         m_MethodName: Destroy
         m_Mode: 1
         m_Arguments:
@@ -92590,7 +92590,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 24ba109c42e96d54ead730d04c56d206, type: 2}
+  - {fileID: 2100000, guid: bf67cafd7d4634344b8ee69e7fc71967, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
