@@ -4131,6 +4131,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5766644652234212728, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: SCK_MainMenu_S00
+      objectReference: {fileID: 0}
     - target: {fileID: 6667287729411648177, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
         type: 3}
       propertyPath: m_textInfo.lineCount
@@ -4749,6 +4754,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 554880079}
     m_Modifications:
+    - target: {fileID: 1269196811831446993, guid: 69e4f02c805f4264b8a6a00af5eca06f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269196811831446993, guid: 69e4f02c805f4264b8a6a00af5eca06f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1269196813272611568, guid: 69e4f02c805f4264b8a6a00af5eca06f,
         type: 3}
       propertyPath: m_Pivot.x
