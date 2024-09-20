@@ -4587,6 +4587,21 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 794865898753881494, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
+        type: 3}
+      propertyPath: onMenuOpened.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 794865898753881494, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
+        type: 3}
+      propertyPath: onMenuOpened.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 794865898753881494, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
+        type: 3}
+      propertyPath: onMenuOpened.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3555278897466004897, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -4634,6 +4649,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: ba9d69850f0196a4888f57c68e65d00a,
         type: 2}
+    - target: {fileID: 6125793580235343111, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
+        type: 3}
+      propertyPath: onCompatibleGameStateEntered.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6667287729411648177, guid: 3eec62885ab8a4c4d8c420ff5f208d67,
         type: 3}
       propertyPath: m_textInfo.lineCount
