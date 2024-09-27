@@ -352,6 +352,11 @@ PrefabInstance:
       propertyPath: range
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 9015464727045139873, guid: 9214d9b174f51184882a046d265223b6,
+        type: 3}
+      propertyPath: healthModifier.defaultDamageValue
+      value: 250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9214d9b174f51184882a046d265223b6, type: 3}
 --- !u!114 &5600949429123291904 stripped
@@ -440,11 +445,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4833084490167011502, guid: be10081350acef04883e89013b514c68,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 724097053ab6b91499aad726ea920e2e, type: 2}
     - target: {fileID: 919132149155446097, guid: be10081350acef04883e89013b514c68,
         type: 3}
       propertyPath: m_Name
       value: Model
       objectReference: {fileID: 0}
+    - target: {fileID: 2929081285664376751, guid: be10081350acef04883e89013b514c68,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 724097053ab6b91499aad726ea920e2e, type: 2}
+    - target: {fileID: 4819380849090237170, guid: be10081350acef04883e89013b514c68,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 724097053ab6b91499aad726ea920e2e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be10081350acef04883e89013b514c68, type: 3}
 --- !u!4 &6124966950574215335 stripped
@@ -515,11 +535,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4833084490167011502, guid: be10081350acef04883e89013b514c68,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 724097053ab6b91499aad726ea920e2e, type: 2}
     - target: {fileID: 919132149155446097, guid: be10081350acef04883e89013b514c68,
         type: 3}
       propertyPath: m_Name
       value: Model
       objectReference: {fileID: 0}
+    - target: {fileID: 2929081285664376751, guid: be10081350acef04883e89013b514c68,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 724097053ab6b91499aad726ea920e2e, type: 2}
+    - target: {fileID: 4819380849090237170, guid: be10081350acef04883e89013b514c68,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 724097053ab6b91499aad726ea920e2e, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be10081350acef04883e89013b514c68, type: 3}
 --- !u!4 &6995860680160819732 stripped
@@ -620,6 +655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.widthMultiplier
       value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015464727045139873, guid: 9214d9b174f51184882a046d265223b6,
+        type: 3}
+      propertyPath: healthModifier.defaultDamageValue
+      value: 250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9214d9b174f51184882a046d265223b6, type: 3}

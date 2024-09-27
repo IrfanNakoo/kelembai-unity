@@ -182,7 +182,7 @@ MonoBehaviour:
   healthModifier:
     healthModifierType: {fileID: 11400000, guid: cb47aa62db8f0ae41be5b7f28565f7ef,
       type: 2}
-    defaultDamageValue: 7500
+    defaultDamageValue: 15000
     damageOverrideValues: []
     damageMultiplier: 1
     defaultHealingValue: 0
@@ -255,6 +255,12 @@ MonoBehaviour:
   disableAfterDistanceCovered: 1
   maxDistance: 1500
   onDetonated:
+    m_PersistentCalls:
+      m_Calls: []
+  onOwnedByPlayer:
+    m_PersistentCalls:
+      m_Calls: []
+  onOwnedByAI:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &114357639931892348

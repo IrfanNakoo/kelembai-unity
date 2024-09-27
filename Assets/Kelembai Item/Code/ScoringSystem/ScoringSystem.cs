@@ -1,103 +1,54 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoringSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static ScoringSystem instance;  // Singleton for easy access
+    public TextMeshProUGUI scoreText;  // Reference to the TextMeshPro UI Text to display the score
+    private int score = 0;  // Current score
+
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-    /*
-    public int baseScorePerKill = 10;
-    public int headshotMultiplier = 2;
-    public int streakBonus = 50;
-    public int objectiveBonus = 100;
-    public float accuracyMultiplier = 0.2f; // 20% of the accuracy percentage
-    public float difficultyMultiplier = 1.5f; // Assuming Hard difficulty
-
-    private int currentScore = 0;
-    private int killStreak = 0;
-    private int totalKills = 0;
-    private int headshotCount = 0;
-    private int totalShotsFired = 0;
-    private int totalShotsHit = 0;
-
-    public void AddKill(bool isHeadshot)
-    {
-        int points = baseScorePerKill;
-
-        if (isHeadshot)
+        // Ensure there's only one instance of ScoringSystem
+        if (instance == null)
         {
-            points *= headshotMultiplier;
-            headshotCount++;
+            Debug.Log("Scoring system activated.");
+            instance = this;
         }
-
-        totalKills++;
-        killStreak++;
-
-        if (killStreak % 5 == 0) // Every 5 kills, add streak bonus
+        else
         {
-            points += streakBonus;
-        }
-
-        currentScore += points;
-        Debug.Log($"Score: {currentScore}");
-    }
-
-    public void AddShotFired()
-    {
-        totalShotsFired++;
-    }
-
-    public void AddShotHit()
-    {
-        totalShotsHit++;
-    }
-
-    public void CompleteObjective()
-    {
-        currentScore += objectiveBonus;
-    }
-
-    public void CalculateFinalScore()
-    {
-        float accuracy = (float)totalShotsHit / totalShotsFired;
-        int accuracyBonus = Mathf.RoundToInt(accuracy * accuracyMultiplier * 100); // 20% of accuracy as bonus
-        currentScore += accuracyBonus;
-
-        currentScore = Mathf.RoundToInt(currentScore * difficultyMultiplier);
-
-        Debug.Log($"Final Score: {currentScore}");
-    }
-    */
-
-
-
-    
-    public GameObject objectA; // Assign objectA in the Unity Editor
-    public int score = 0; // Initial score
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        // Check if the enemy collided with objectA
-        if (collision.gameObject == objectA)
-        {
-            // Increase the score by 10
-            score += 10;
-            Debug.Log("Enemy hit objectA. Score: " + score);
-
-            // Destroy the enemy GameObject
+            Debug.LogWarning("Duplicate ScoringSystem detected. Destroying this instance.");
             Destroy(gameObject);
         }
     }
 
+    // Method to increase the score
+    public void AddScore(int points)
+    {
+        score += points;
+        Debug.Log("Score increased by " + points + ". Current score: " + score);
+        UpdateScoreUI();
+    }
+
+    // Method to update the score in the UI
+    private void UpdateScoreUI()
+    {
+        scoreText.text = "Score: " + score.ToString();
+        Debug.Log("Score UI updated. Displaying: Score: " + score);
+    }
+
+    // Optional: Reset the score
+    public void ResetScore()
+    {
+        score = 0;
+        Debug.Log("Score reset. Current score: " + score);
+        UpdateScoreUI();
+    }
+
+    public int GetScore()
+    {
+        Debug.Log("Current score queried: " + score);
+        return score;
+    }
 }

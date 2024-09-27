@@ -318,7 +318,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthModifier:
     healthModifierType: {fileID: 0}
-    defaultDamageValue: 5000
+    defaultDamageValue: 10000
     damageOverrideValues: []
     damageMultiplier: 1
     defaultHealingValue: 0
