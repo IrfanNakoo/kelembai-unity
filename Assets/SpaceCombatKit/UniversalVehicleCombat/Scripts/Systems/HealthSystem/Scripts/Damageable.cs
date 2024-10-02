@@ -127,7 +127,6 @@ namespace VSX.UniversalVehicleCombat
         [SerializeField]
         protected bool restoreOnEnable = true;
 
-
         [Header("Collisions")]
 
         [Tooltip("Whether to factor in the impulse (function of mass) of the collision when calculating damage.")]
@@ -366,5 +365,39 @@ namespace VSX.UniversalVehicleCombat
 
 
         public virtual void SetColliderActivation(bool activate) { }
+
+
+
+
+
+        /*-----Tambahan-----*/
+        [SerializeField] private int pointsForDestruction = 100; // Points awarded when this object is destroyed
+
+        public void GetDestroy()
+        {
+            if (destroyed) return;  // Ensure we don't destroy the object twice
+            destroyed = true;
+            Debug.Log("this code is active now");
+
+            // Award points if ScoringSystem instance exists
+            if (ScoringSystem.instance != null)
+            {
+                ScoringSystem.instance.AddScore(pointsForDestruction);
+            }
+            else
+            {
+                Debug.LogWarning("ScoringSystem instance not found! Unable to add score.");
+            }
+
+            // Call the destroyed event
+            onDestroyed.Invoke();
+
+            if (disableGameObjectOnDestroyed) gameObject.SetActive(false);
+        }
+
+
+
+
+
     }
 }
