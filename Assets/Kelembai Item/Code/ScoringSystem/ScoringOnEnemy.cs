@@ -4,26 +4,19 @@ using UnityEngine;
 
 public class ScoringOnEnemy : MonoBehaviour
 {
-    public int points = 100;  // Points awarded when this enemy is destroyed
+    public int enemyHealth = 100;
 
-    // Example method to destroy the enemy when hit
-    public void TakeDamage()
+    void TakeDamage(int damage)
     {
-        Debug.Log("Enemy " + gameObject.name + " has taken damage.");
+        enemyHealth -= damage;
 
-        // Destroy the enemy
-        Destroy(gameObject);
-        Debug.Log("Enemy " + gameObject.name + " has been destroyed.");
+        if (enemyHealth <= 0)
+        {
+            // Destroy the enemy object
+            Destroy(gameObject);
 
-        // Add points to the score, if ScoringSystem instance exists
-        if (ScoringSystem.instance != null)
-        {
-            Debug.Log("Adding " + points + " points to the score.");
-            ScoringSystem.instance.AddScore(points);
-        }
-        else
-        {
-            Debug.LogWarning("ScoringSystem instance not found! Unable to add score.");
+            // Add score to the player
+            ScoringSystem.instance.AddScore(ScoringSystem.instance.scorePerEnemy);
         }
     }
 }

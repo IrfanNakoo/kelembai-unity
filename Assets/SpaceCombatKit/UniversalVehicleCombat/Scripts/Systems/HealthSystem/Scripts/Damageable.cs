@@ -369,8 +369,8 @@ namespace VSX.UniversalVehicleCombat
 
 
 
-
-        /*-----Tambahan-----*/
+        
+        /*-----Tambahan-----
         [SerializeField] private int pointsForDestruction = 100; // Points awarded when this object is destroyed
 
         public void GetDestroy()
@@ -393,7 +393,7 @@ namespace VSX.UniversalVehicleCombat
             onDestroyed.Invoke();
 
             if (disableGameObjectOnDestroyed) gameObject.SetActive(false);
-        }
+        }*/
 
 
 

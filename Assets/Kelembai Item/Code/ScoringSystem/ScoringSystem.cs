@@ -1,54 +1,80 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro; // For TextMeshPro elements, if needed
+using UnityEngine.UI;  // For displaying the score on the UI
 
 public class ScoringSystem : MonoBehaviour
 {
-    public static ScoringSystem instance;  // Singleton for easy access
-    public TextMeshProUGUI scoreText;  // Reference to the TextMeshPro UI Text to display the score
-    private int score = 0;  // Current score
+    public static ScoringSystem instance;
+
+    // The current score and high score
+    private int currentScore = 0;
+    private int highScore = 0;
+
+    // Reference to the UI text element that displays the current score
+    public TMP_Text scoreText;
+
+    // Reference to the UI text element that displays the high score
+    public TMP_Text highScoreText;
+
+    // Score to add when an enemy is destroyed
+    public int scorePerEnemy = 100;
+
+    void Start()
+    {
+        // Ensure the highScoreText is updated on game start
+        highScore = GetHighScore();  // Use the class-level highScore
+        highScoreText.text = "High Score: " + highScore;
+    }
 
     void Awake()
     {
-        // Ensure there's only one instance of ScoringSystem
+        // Singleton pattern to make sure only one ScoreManager exists
         if (instance == null)
         {
-            Debug.Log("Scoring system activated.");
             instance = this;
+            DontDestroyOnLoad(gameObject); // Persist between scenes if needed
         }
         else
         {
-            Debug.LogWarning("Duplicate ScoringSystem detected. Destroying this instance.");
             Destroy(gameObject);
+        }
+
+        // Load the high score from player preferences
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
+    }
+
+    // Function to add points to the score
+    public void AddScore(int points)
+    {
+        currentScore += points;
+        UpdateScoreUI();
+
+        // Check if the new score is higher than the high score
+        if (currentScore > highScore)
+        {
+            highScore = currentScore;
+            PlayerPrefs.SetInt("HighScore", highScore);
+            PlayerPrefs.Save(); // Ensure the high score is saved
+            highScoreText.text = "High Score: " + highScore;
         }
     }
 
-    // Method to increase the score
-    public void AddScore(int points)
+    // Function to update the score UI
+    void UpdateScoreUI()
     {
-        score += points;
-        Debug.Log("Score increased by " + points + ". Current score: " + score);
-        UpdateScoreUI();
+        scoreText.text = "Score: " + currentScore;
     }
 
-    // Method to update the score in the UI
-    private void UpdateScoreUI()
-    {
-        scoreText.text = "Score: " + score.ToString();
-        Debug.Log("Score UI updated. Displaying: Score: " + score);
-    }
-
-    // Optional: Reset the score
+    // Optional function to reset score when a new game starts
     public void ResetScore()
     {
-        score = 0;
-        Debug.Log("Score reset. Current score: " + score);
+        currentScore = 0;
         UpdateScoreUI();
     }
 
-    public int GetScore()
+    // Optional function to get the high score
+    public int GetHighScore()
     {
-        Debug.Log("Current score queried: " + score);
-        return score;
+        return highScore;
     }
 }
