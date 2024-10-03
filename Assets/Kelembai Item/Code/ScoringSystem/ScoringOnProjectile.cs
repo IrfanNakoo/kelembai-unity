@@ -1,41 +1,39 @@
-/*using System.Collections;
+ /*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoringOnProjectile : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+    public float activationDelay = 0.5f;
+    private Collider projectileCollider;
+
+    private void Awake()
     {
-        Debug.Log("Projectile collided with: " + collision.gameObject.name);
+        // Get the collider component
+        projectileCollider = GetComponent<Collider>();
 
-        if (collision.gameObject.CompareTag("Enemy"))
+        // Initially disable the collider
+        projectileCollider.enabled = false;
+
+        // Enable the collider after a delay
+        Invoke("EnableCollider", activationDelay);
+    }
+
+    void EnableCollider()
+    {
+        projectileCollider.enabled = true;
+    }
+
+   
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            Debug.Log("Projectile hit an enemy: " + collision.gameObject.name);
-
-            // Try to get the Enemy component
-            ScoringOnEnemy enemy = collision.gameObject.GetComponent<ScoringOnEnemy>();
-
-            // Ensure the enemy has an Enemy script attached
-            if (enemy != null)
-            {
-                Debug.Log("ScoringOnEnemy component found on: " + collision.gameObject.name);
-
-                // Call the enemy's TakeDamage method
-                enemy.TakeDamage();
-            }
-            else
-            {
-                Debug.LogWarning("Enemy component not found on object with 'Enemy' tag: " + collision.gameObject.name);
-            }
-
+            // Damage logic for the enemy
             // Destroy the projectile
-            Debug.Log("Projectile destroyed.");
             Destroy(gameObject);
         }
-        else
-        {
-            Debug.Log("Projectile hit a non-enemy object: " + collision.gameObject.name);
-        }
     }
+    
 }
 */

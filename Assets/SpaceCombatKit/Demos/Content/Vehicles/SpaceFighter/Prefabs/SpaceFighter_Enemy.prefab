@@ -819,7 +819,7 @@ GameObject:
   - component: {fileID: 3495613439252949822}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: EnemyAllRounderShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3255,6 +3255,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpaceFighter_Engine
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbec1f61e36e8c14190c05679da3895b,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemyAllRounderShip
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbec1f61e36e8c14190c05679da3895b, type: 3}
 --- !u!4 &1365083898798463716 stripped
@@ -4944,6 +4949,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7345453934559215063}
     m_Modifications:
+    - target: {fileID: -3145362562666645809, guid: d75bdaf40bd3cd946962686a7b3a02cb,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemyAllRounderShip
+      objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: d75bdaf40bd3cd946962686a7b3a02cb, type: 3}
       propertyPath: m_Name
       value: Fuselage
@@ -6243,6 +6253,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpaceFighter_Engine
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fbec1f61e36e8c14190c05679da3895b,
+        type: 3}
+      propertyPath: m_TagString
+      value: EnemyAllRounderShip
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbec1f61e36e8c14190c05679da3895b, type: 3}
