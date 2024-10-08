@@ -283,7 +283,7 @@ MonoBehaviour:
   - {fileID: 1247800913989648, guid: c504071d960e56c43be881e73e4b3bf5, type: 3}
   spawnTransform: {fileID: 8630841466978042602}
   parentToSpawnTransform: 0
-  scale: 35
+  scale: 100
 --- !u!1 &1788593751143428231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1371,7 +1371,20 @@ MonoBehaviour:
   characterExitSpawn: {fileID: 0}
   onDestroyed:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1740690185913558154, guid: 6897b88eb44685b48849847e61eb8c11,
+          type: 3}
+        m_TargetAssemblyTypeName: ScoringSystem, Assembly-CSharp
+        m_MethodName: AddScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onRestored:
     m_PersistentCalls:
       m_Calls: []
@@ -1427,18 +1440,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 5013574646997786361}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: OnCollision
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnCollision
         m_Mode: 0
@@ -3258,7 +3259,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbec1f61e36e8c14190c05679da3895b,
         type: 3}
       propertyPath: m_TagString
-      value: EnemyAllRounderShip
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbec1f61e36e8c14190c05679da3895b, type: 3}
@@ -4952,7 +4953,7 @@ PrefabInstance:
     - target: {fileID: -3145362562666645809, guid: d75bdaf40bd3cd946962686a7b3a02cb,
         type: 3}
       propertyPath: m_TagString
-      value: EnemyAllRounderShip
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: d75bdaf40bd3cd946962686a7b3a02cb, type: 3}
       propertyPath: m_Name
@@ -6257,7 +6258,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: fbec1f61e36e8c14190c05679da3895b,
         type: 3}
       propertyPath: m_TagString
-      value: EnemyAllRounderShip
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fbec1f61e36e8c14190c05679da3895b, type: 3}

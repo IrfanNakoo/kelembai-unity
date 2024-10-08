@@ -93,9 +93,10 @@ namespace VSX.UniversalVehicleCombat
         }
 
 
-        //-------Tambahan---------//
+        /*-------Tambahan---------//
         public ScoringSystem CallingScoringSystem;
-        //-------EndTambahan---------//
+        public int 
+        //-------EndTambahan---------*/
 
 
         // Do a single hit scan
@@ -125,10 +126,15 @@ namespace VSX.UniversalVehicleCombat
                 disabled = true;
                 onHitDetected.Invoke(hits[i]);
 
+                /*
                 if (hits[i].collider.CompareTag("EnemyCapitalShip"))
                 {
-                    Debug.Log("confirm hitting enemyCapitalShip detected");
-                    CallingScoringSystem.AddScore(500);
+                    if ()
+                    {
+                        Debug.Log("confirm hitting enemyCapitalShip detected");
+                        CallingScoringSystem.AddScore(500);
+                    }
+                    
                 }
 
                 else if (hits[i].collider.CompareTag("EnemyBase"))
@@ -142,6 +148,7 @@ namespace VSX.UniversalVehicleCombat
                     Debug.Log("confirm hitting enemyAllRounderShip detected");
                     CallingScoringSystem.AddScore(100);
                 }
+                */
 
                 break;
 

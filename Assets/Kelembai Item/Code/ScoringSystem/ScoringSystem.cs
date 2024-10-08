@@ -13,11 +13,10 @@ public class ScoringSystem : MonoBehaviour
     public TMP_Text highScoreText;
 
     public int scorePerEnemy = 100;
-    public CollisionScanner collisionScanner;
 
+    // Ensure a singleton instance
     void Awake()
     {
-        // Ensure a singleton instance
         if (instance == null)
         {
             instance = this;
@@ -32,34 +31,12 @@ public class ScoringSystem : MonoBehaviour
         highScoreText.text = "High Score: " + highScore;
     }
 
-    void Start()
-    {
-        // Subscribe to collision event
-        if (collisionScanner != null)
-        {
-            collisionScanner.onHitDetected.AddListener(OnEnemyHit);
-            collisionScanner.CallingScoringSystem = this;
-        }
-    }
-
-    void OnDestroy()
-    {
-        // Unsubscribe from the event
-        if (collisionScanner != null)
-        {
-            collisionScanner.onHitDetected.RemoveListener(OnEnemyHit);
-        }
-    }
-
-    void OnEnemyHit(RaycastHit hit)
-    {
-        AddScore(scorePerEnemy);
-    }
-
+    // Adds score based on points and updates the UI
     public void AddScore(int points)
     {
         currentScore += points;
         scoreText.text = "Score: " + currentScore;
+        Debug.Log("code nie pulak yang hidup");
 
         if (currentScore > highScore)
         {
@@ -70,12 +47,14 @@ public class ScoringSystem : MonoBehaviour
         }
     }
 
+    // Reset score method
     public void ResetScore()
     {
         currentScore = 0;
         scoreText.text = "Score: " + currentScore;
     }
 
+    // Getter for high score
     public int GetHighScore()
     {
         return highScore;
