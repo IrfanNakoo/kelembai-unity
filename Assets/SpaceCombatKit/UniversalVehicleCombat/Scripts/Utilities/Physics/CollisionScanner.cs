@@ -92,13 +92,6 @@ namespace VSX.UniversalVehicleCombat
             lastPosition = transform.position;
         }
 
-
-        /*-------Tambahan---------//
-        public ScoringSystem CallingScoringSystem;
-        public int 
-        //-------EndTambahan---------*/
-
-
         // Do a single hit scan
         protected void DoHitScan()
         {
@@ -125,30 +118,6 @@ namespace VSX.UniversalVehicleCombat
 
                 disabled = true;
                 onHitDetected.Invoke(hits[i]);
-
-                /*
-                if (hits[i].collider.CompareTag("EnemyCapitalShip"))
-                {
-                    if ()
-                    {
-                        Debug.Log("confirm hitting enemyCapitalShip detected");
-                        CallingScoringSystem.AddScore(500);
-                    }
-                    
-                }
-
-                else if (hits[i].collider.CompareTag("EnemyBase"))
-                {
-                    Debug.Log("confirm hitting enemyBase detected");
-                    CallingScoringSystem.AddScore(200);
-                }
-
-                else if (hits[i].collider.CompareTag("EnemyAllRounderShip"))
-                {
-                    Debug.Log("confirm hitting enemyAllRounderShip detected");
-                    CallingScoringSystem.AddScore(100);
-                }
-                */
 
                 break;
 

@@ -27,7 +27,7 @@ public class ScoringSystem : MonoBehaviour
             Destroy(gameObject);
         }
 
-        highScore = PlayerPrefs.GetInt("HighScore", 0);
+        highScore = PlayerPrefs.GetInt("HighScoreTutorial", 0);
         highScoreText.text = "High Score: " + highScore;
     }
 
@@ -42,7 +42,7 @@ public class ScoringSystem : MonoBehaviour
         {
             highScore = currentScore;
             highScoreText.text = "High Score: " + highScore;
-            PlayerPrefs.SetInt("HighScore", highScore);
+            PlayerPrefs.SetInt("HighScoreTutorial", highScore);
             PlayerPrefs.Save();
         }
     }

@@ -1263,7 +1263,7 @@ PrefabInstance:
     - target: {fileID: 7158956672560979163, guid: 5bf9b243976e1034cba284ad2e6a2675,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7158956672560979163, guid: 5bf9b243976e1034cba284ad2e6a2675,
         type: 3}
@@ -3076,6 +3076,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ad1ff47c5c69af43830acbaca6a00f6, type: 3}
+--- !u!1 &638038477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 638038479}
+  - component: {fileID: 638038478}
+  m_Layer: 0
+  m_Name: SceneMenager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &638038478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638038477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea07c639a3a6c6c44906fec2aa353de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScoreText: {fileID: 2027304634}
+--- !u!4 &638038479
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638038477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 894.22284, y: 517.7691, z: 0.0017547607}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &640218065
 GameObject:
   m_ObjectHideFlags: 0
@@ -4042,7 +4087,7 @@ PrefabInstance:
     - target: {fileID: 4460333058852632181, guid: 9fe8157e7a125d14db8605a0d8e87631,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4460333058852632181, guid: 9fe8157e7a125d14db8605a0d8e87631,
         type: 3}
@@ -4274,7 +4319,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6832b8c7fdd3d664dba4409a78cb2470,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6832b8c7fdd3d664dba4409a78cb2470,
         type: 3}
@@ -6024,7 +6069,7 @@ PrefabInstance:
     - target: {fileID: 1321325040073816516, guid: d9e9431739641bb499a54d7495d1639a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1321325040073816516, guid: d9e9431739641bb499a54d7495d1639a,
         type: 3}
@@ -6330,7 +6375,7 @@ PrefabInstance:
     - target: {fileID: 2059440181239324724, guid: 7219cae115bd94f499cda0ed38040d80,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2059440181239324724, guid: 7219cae115bd94f499cda0ed38040d80,
         type: 3}
@@ -7184,7 +7229,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: score
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8006,7 +8051,7 @@ Transform:
   - {fileID: 1950891911}
   - {fileID: 471555661}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3432399768162130545
 MonoBehaviour:
@@ -8196,7 +8241,7 @@ Transform:
   - {fileID: 4994805825438626994}
   - {fileID: 8983020815761021130}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: -19.78, z: 0}
 --- !u!1 &4994805825808383723
 GameObject:
