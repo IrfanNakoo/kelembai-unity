@@ -27,7 +27,8 @@ public class ScoringSystem : MonoBehaviour
             Destroy(gameObject);
         }
 
-        highScore = PlayerPrefs.GetInt("HighScoreTutorial", 0);
+        // Retrieve the saved high score when the game starts
+        highScore = PlayerPrefs.GetInt("HighScore", 0);
         highScoreText.text = "High Score: " + highScore;
     }
 
@@ -36,13 +37,15 @@ public class ScoringSystem : MonoBehaviour
     {
         currentScore += points;
         scoreText.text = "Score: " + currentScore;
-        Debug.Log("code nie pulak yang hidup");
+        Debug.Log("Score updated: " + currentScore);
 
         if (currentScore > highScore)
         {
             highScore = currentScore;
             highScoreText.text = "High Score: " + highScore;
-            PlayerPrefs.SetInt("HighScoreTutorial", highScore);
+
+            // Save the new high score in PlayerPrefs
+            PlayerPrefs.SetInt("HighScore", highScore);
             PlayerPrefs.Save();
         }
     }

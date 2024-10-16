@@ -24,6 +24,9 @@ EditorBuildSettings:
     path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/SCK_TutorTrainingDome_S02.unity
     guid: 40890936006a2994b9b9d363d2bdf360
   - enabled: 1
+    path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/SCK_VScreen_S02.1.unity
+    guid: 946622ec04926284c885e98d380e0a70
+  - enabled: 1
     path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/SCK_SpaceCombat_S03.unity
     guid: 9fd4d62026fd83e4b8072a65a9a10378
   - enabled: 1

@@ -17,3 +17,4 @@ MonoBehaviour:
   hostileTeams:
   - {fileID: 11400000, guid: f6183930511df324ca41846a92df975f, type: 2}
   - {fileID: 11400000, guid: f160147277bc92e4bb4b1c92df4ef5fd, type: 2}
+  - {fileID: 11400000, guid: 2f80f7cc5d37c4f4fa0baa3eb371607a, type: 2}

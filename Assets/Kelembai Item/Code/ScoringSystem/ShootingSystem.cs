@@ -4,27 +4,36 @@ using UnityEngine;
 
 public class ShootingSystem : MonoBehaviour
 {
-    private int totalShotsFired = 0;   // Total shots fired
-    private int shotsHit = 0;          // Total shots that hit a target
+    public AccuracySystem shootingSystem;
 
-    // Call this when a shot is fired
-    public void ShotFired()
+    void Start()
     {
-        totalShotsFired++;
-        Debug.Log("Shot fired. Total shots: " + totalShotsFired);
+        // If no AccuracySystem is assigned in the Inspector, find one in the scene
+        if (shootingSystem == null)
+        {
+            shootingSystem = FindObjectOfType<AccuracySystem>();
+        }
+
+        // If still null, print an error to help with debugging
+        if (shootingSystem == null)
+        {
+            Debug.LogError("AccuracySystem not found in the scene. Make sure it exists.");
+        }
     }
 
-    // Call this when a shot successfully hits a target
-    public void ShotHit()
+    void Update()
     {
-        shotsHit++;
-        Debug.Log("Shot hit! Total hits: " + shotsHit);
+        if (Input.GetButtonDown("Fire1")) // Replace with your shooting input
+        {
+            shootingSystem?.ShotFired(); // Safe call with the null-conditional operator
+        }
     }
 
-    // Calculate and return the accuracy percentage
-    public float GetAccuracy()
+    void OnTriggerEnter(Collider other)
     {
-        if (totalShotsFired == 0) return 0;
-        return (float)shotsHit / totalShotsFired * 100f;
+        if (other.CompareTag("Enemy")) // Assuming enemies have the tag "Enemy"
+        {
+            shootingSystem?.ShotHit(); // Safe call with the null-conditional operator
+        }
     }
 }

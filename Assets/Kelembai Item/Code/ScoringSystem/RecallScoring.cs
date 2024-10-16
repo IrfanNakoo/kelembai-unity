@@ -5,14 +5,19 @@ using TMPro;
 
 public class RecallScoring : MonoBehaviour
 {
-   public TMP_Text highScoreText;
+    public TMP_Text highScoreText;  // UI element to display the high score
+    public TMP_Text accuracyText;   // UI element to display the accuracy
 
-   void Start()
-   {
-       // Retrieve the saved high score
-       int highScore = PlayerPrefs.GetInt("HighScoreTutorial", 0);  // Default to 0 if no score is found
+    private int highScore;          // Variable to store high score
 
-       // Update the UI to show the high score
-       highScoreText.text = "Score: " + highScore;
-   }
+    void Start()
+    {
+        // Retrieve the saved high score when the game starts
+        highScore = PlayerPrefs.GetInt("HighScore", 0);  // Default to 0 if not found
+        highScoreText.text = "" + highScore;
+
+        // Retrieve accuracy from PlayerPrefs
+        float storedAccuracy = PlayerPrefs.GetFloat("PlayerAccuracy", 0f); // Default to 0 if not found
+        accuracyText.text = "" + storedAccuracy.ToString("F2") + "%";
+    }
 }

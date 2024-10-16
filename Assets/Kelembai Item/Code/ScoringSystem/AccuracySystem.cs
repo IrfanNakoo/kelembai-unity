@@ -18,6 +18,7 @@ public class AccuracySystem : MonoBehaviour
         if (shotsFired < totalAmmo)  // Ensure they can't shoot more than total ammo
         {
             shotsFired++;
+            Debug.Log("Shot fired. Total shots: " + shotsFired);
             UpdateAccuracy();
         }
         else
@@ -30,6 +31,7 @@ public class AccuracySystem : MonoBehaviour
     public void ShotHit()
     {
         shotsHit++;
+        Debug.Log("Shot hit! Total hits: " + shotsHit);
         UpdateAccuracy();
     }
 
@@ -54,5 +56,6 @@ public class AccuracySystem : MonoBehaviour
         shotsHit = 0;
         accuracy = 0f;
         accuracyText.text = "Accuracy: N/A";
+        Debug.Log("Shooting and accuracy system reset.");
     }
 }
