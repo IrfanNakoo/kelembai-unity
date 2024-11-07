@@ -279,6 +279,6 @@ namespace VSX.UniversalVehicleCombat
                 m_rigidbody.AddRelativeForce(nextMovementForces);
 
             }
-		}
-	}
+        }
+    }
 }

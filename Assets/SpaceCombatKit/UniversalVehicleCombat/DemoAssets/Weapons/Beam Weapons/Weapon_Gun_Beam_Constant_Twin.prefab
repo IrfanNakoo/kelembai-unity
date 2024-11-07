@@ -279,7 +279,18 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 1944337703493419651, guid: 9214d9b174f51184882a046d265223b6,
         type: 3}
+      propertyPath: settingsList.Array.data[1].cameraView
+      value: 
+      objectReference: {fileID: 11400000, guid: f1d8dae701e24b64e8643566bf85f6a7,
+        type: 2}
+    - target: {fileID: 1944337703493419651, guid: 9214d9b174f51184882a046d265223b6,
+        type: 3}
       propertyPath: settingsList.Array.data[0].widthMultiplier
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944337703493419651, guid: 9214d9b174f51184882a046d265223b6,
+        type: 3}
+      propertyPath: settingsList.Array.data[1].widthMultiplier
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1944337703493419651, guid: 9214d9b174f51184882a046d265223b6,

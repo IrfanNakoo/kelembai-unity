@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb734aece24fbd643828592c4ab9cf01, type: 3}
   m_Name: MissileWeapon
   m_EditorClassIdentifier: 
+  labels: []

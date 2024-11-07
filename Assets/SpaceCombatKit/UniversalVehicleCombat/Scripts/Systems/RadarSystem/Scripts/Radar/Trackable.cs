@@ -25,7 +25,11 @@ namespace VSX.UniversalVehicleCombat.Radar
 
         [SerializeField]
         protected TrackableType trackableType;
-        public TrackableType TrackableType { get { return trackableType; } }
+        public TrackableType TrackableType 
+        { 
+            get { return trackableType; }
+            set { trackableType = value; }
+        }
 
         [SerializeField]
         protected Team team;

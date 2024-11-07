@@ -388,8 +388,8 @@ MonoBehaviour:
   detonator: {fileID: 114499931625191688}
   speed: 100
   movementUpdateMode: 1
-  disableAfterLifetime: 0
-  lifetime: 10
+  disableAfterLifetime: 1
+  lifetime: 5
   disableAfterDistanceCovered: 0
   maxDistance: 2000
   onDetonated:
@@ -407,7 +407,7 @@ MonoBehaviour:
   setKinematicOnCollision: 1
   noLockLifetime: 4
   triggerMode: 1
-  triggerDistance: 49
+  triggerDistance: 50
   leadTargetThreshold: 1000
   steeringPIDController:
     controllerXAxis:

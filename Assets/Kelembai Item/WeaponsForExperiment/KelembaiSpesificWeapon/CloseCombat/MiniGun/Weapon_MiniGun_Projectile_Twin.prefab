@@ -225,7 +225,7 @@ MonoBehaviour:
   changeRate: 0
   startAmount: 300
   emptiedPause: 0
-  fillToCapacityAfterEmptiedPause: 0
+  fillToCapacityAfterEmptiedPause: 1
   filledPause: 0
   emptyAfterFilledPause: 0
 --- !u!1 &5944103410486435846

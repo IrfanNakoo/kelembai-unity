@@ -388,8 +388,8 @@ MonoBehaviour:
   detonator: {fileID: 114499931625191688}
   speed: 100
   movementUpdateMode: 1
-  disableAfterLifetime: 0
-  lifetime: 8
+  disableAfterLifetime: 1
+  lifetime: 5
   disableAfterDistanceCovered: 0
   maxDistance: 1500
   onDetonated:

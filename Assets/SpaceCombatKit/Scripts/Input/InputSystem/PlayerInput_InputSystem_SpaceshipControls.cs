@@ -1,6 +1,4 @@
-﻿//Still testing
-
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -25,7 +23,7 @@ namespace VSX.UniversalVehicleCombat
 
         [Tooltip("How much the vehicle should yaw when rolling.")]
         [SerializeField]
-        protected float yawRollRatio = 1;
+        protected float yawRollRatio = 10;
 
         [Header("Auto Roll")]
         [SerializeField]
