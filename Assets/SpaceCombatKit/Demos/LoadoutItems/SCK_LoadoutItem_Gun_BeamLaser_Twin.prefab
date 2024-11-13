@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3882066034374653341}
   - component: {fileID: 8816834901963849795}
   m_Layer: 0
-  m_Name: SCK_LoadoutItem_Gun_BeamConstant_Twin
+  m_Name: SCK_LoadoutItem_Gun_BeamLaser_Twin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

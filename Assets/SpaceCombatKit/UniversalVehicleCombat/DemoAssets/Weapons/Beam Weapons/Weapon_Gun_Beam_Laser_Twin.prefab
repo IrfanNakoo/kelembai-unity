@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 4213074414490036039}
   - component: {fileID: 6833846526669762669}
   m_Layer: 0
-  m_Name: Weapon_Gun_Beam_Constant_Twin
+  m_Name: Weapon_Gun_Beam_Laser_Twin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,13 +370,44 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9214d9b174f51184882a046d265223b6, type: 3}
+--- !u!1 &3740202535779435441 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 234207866635089168, guid: 9214d9b174f51184882a046d265223b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3505995906707420833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5629246038140222019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3740202535779435441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696e8838ed735264aac535bcba19e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  hitScanIntervalType: 0
+  hitScanFrameInterval: 1
+  hitScanTimeInterval: 0
+  ignoreTriggerColliders: 0
+  ignoreHierarchyCollision: 1
+  rootTransform: {fileID: 2500151513750856610}
+  m_Rigidbody: {fileID: 0}
+  onHitDetected:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5600949429123291904 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9015464727045139873, guid: 9214d9b174f51184882a046d265223b6,
     type: 3}
   m_PrefabInstance: {fileID: 3505995906707420833}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3740202535779435441}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1b2a9941d59e91458b9206565369c03, type: 3}
@@ -680,7 +711,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 8711565246450090679}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8909704183346182055}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b1b2a9941d59e91458b9206565369c03, type: 3}
@@ -698,3 +729,34 @@ LineRenderer:
     type: 3}
   m_PrefabInstance: {fileID: 8711565246450090679}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8909704183346182055 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 234207866635089168, guid: 9214d9b174f51184882a046d265223b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 8711565246450090679}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6390880075110028218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8909704183346182055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696e8838ed735264aac535bcba19e9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  hitScanIntervalType: 0
+  hitScanFrameInterval: 1
+  hitScanTimeInterval: 0
+  ignoreTriggerColliders: 0
+  ignoreHierarchyCollision: 1
+  rootTransform: {fileID: 2500151513750856610}
+  m_Rigidbody: {fileID: 0}
+  onHitDetected:
+    m_PersistentCalls:
+      m_Calls: []

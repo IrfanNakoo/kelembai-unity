@@ -118,18 +118,14 @@ namespace VSX.ResourceSystem
             
             float nextValue = currentAmount + amount;
 
-            if (nextValue >= capacity && !Mathf.Approximately(currentAmount, capacity))
-            {
-                OnFilled();
-            }
-
-            if (nextValue <= 0 && !Mathf.Approximately(currentAmount, 0))
-            {
-                OnEmpty();
-            }
+            bool filledThisFrame = nextValue >= capacity && currentAmount < capacity;
+            bool emptyThisFrame = nextValue <= 0 && currentAmount > 0;
 
             SetAmount(nextValue);
 
+            if (filledThisFrame) OnFilled();
+
+            if(emptyThisFrame) OnEmpty();
         }
 
 
@@ -205,6 +201,7 @@ namespace VSX.ResourceSystem
         // Called when the container is filled.
         protected override void OnFilled()
         {
+
             base.OnFilled();
 
             if (filledPause > 0)
@@ -219,6 +216,7 @@ namespace VSX.ResourceSystem
         // Called when the container is emptied.
         protected override void OnEmpty()
         {
+
             base.OnEmpty();
 
             if (emptiedPause > 0)

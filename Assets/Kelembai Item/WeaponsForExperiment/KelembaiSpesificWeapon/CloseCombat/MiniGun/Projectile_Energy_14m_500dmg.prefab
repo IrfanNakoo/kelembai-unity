@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1256465192544184063}
   - component: {fileID: 114724404775509316}
   m_Layer: 0
-  m_Name: Projectile_Energy_14m
+  m_Name: Projectile_Energy_14m_500dmg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,9 +51,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthModifier:
-    healthModifierType: {fileID: 11400000, guid: cb47aa62db8f0ae41be5b7f28565f7ef,
-      type: 2}
-    defaultDamageValue: 250
+    healthModifierType: {fileID: 0}
+    defaultDamageValue: 500
     damageOverrideValues: []
     damageMultiplier: 1
     defaultHealingValue: 0
@@ -119,12 +118,12 @@ MonoBehaviour:
   checkLineOfSight: 1
   collisionScanner: {fileID: 114768807756433516}
   detonator: {fileID: 7364190624370176800}
-  speed: 1500
+  speed: 1000
   movementUpdateMode: 1
   disableAfterLifetime: 0
   lifetime: 3
   disableAfterDistanceCovered: 1
-  maxDistance: 1500
+  maxDistance: 800
   onDetonated:
     m_PersistentCalls:
       m_Calls: []

@@ -283,7 +283,7 @@ MonoBehaviour:
   hitScanTimeInterval: 0
   ignoreTriggerColliders: 1
   ignoreHierarchyCollision: 1
-  rootTransform: {fileID: 0}
+  rootTransform: {fileID: 4726643675927484}
   m_Rigidbody: {fileID: 0}
   onHitDetected:
     m_PersistentCalls:

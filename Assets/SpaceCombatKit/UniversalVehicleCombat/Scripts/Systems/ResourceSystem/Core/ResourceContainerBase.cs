@@ -8,7 +8,7 @@ namespace VSX.ResourceSystem
     /// <summary>
     /// Base class for a resource container.
     /// </summary>
-    public class ResourceContainerBase : MonoBehaviour
+    public abstract class ResourceContainerBase : MonoBehaviour
     {
         public virtual ResourceType ResourceType { get { return null; } }
 
