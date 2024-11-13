@@ -115,6 +115,11 @@ namespace VSX.UniversalVehicleCombat
                 {
                     ShotHit();  // Increment shots hit if an enemy was hit
                     Debug.Log("Enemy hit!");
+
+
+
+
+
                 }
 
                 transform.position = hits[i].point;
@@ -179,6 +184,12 @@ namespace VSX.UniversalVehicleCombat
         {
             shotsHit++;
             Debug.Log("Shots Hit: " + shotsHit);
+
+
+
+
+
+
         }
     }
 }

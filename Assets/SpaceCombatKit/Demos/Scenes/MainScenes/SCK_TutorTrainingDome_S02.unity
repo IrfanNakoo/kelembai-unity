@@ -16209,7 +16209,7 @@ GameObject:
   - component: {fileID: 356873295}
   m_Layer: 0
   m_Name: CapitalShip_Enemy 0
-  m_TagString: Untagged
+  m_TagString: EnemyCapitalShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50116,7 +50116,7 @@ GameObject:
   - component: {fileID: 969302923}
   m_Layer: 0
   m_Name: CapitalShip_Enemy
-  m_TagString: Untagged
+  m_TagString: EnemyCapitalShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68752,7 +68752,7 @@ GameObject:
   - component: {fileID: 1166890351}
   m_Layer: 0
   m_Name: Parts
-  m_TagString: EnemyCapitalShip
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113936,7 +113936,7 @@ GameObject:
   - component: {fileID: 1518041171}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: EnemyCapitalShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201941,7 +201941,7 @@ GameObject:
   - component: {fileID: 7934144726295711637}
   m_Layer: 0
   m_Name: Hull
-  m_TagString: Untagged
+  m_TagString: EnemyCapitalShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -202463,7 +202463,7 @@ GameObject:
   - component: {fileID: 7655490985385228447}
   m_Layer: 0
   m_Name: Collider
-  m_TagString: Untagged
+  m_TagString: EnemyCapitalShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273349,7 +273349,7 @@ GameObject:
   - component: {fileID: 7751984308422444241}
   m_Layer: 0
   m_Name: CapitalShip_Enemy
-  m_TagString: Untagged
+  m_TagString: EnemyCapitalShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
