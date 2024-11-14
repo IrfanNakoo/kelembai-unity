@@ -12675,6 +12675,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestingAccuracySystem (TextMeshPro)
       objectReference: {fileID: 0}
+    - target: {fileID: 6540544002420313363, guid: c68b16c4f961feb418d6652ce1a57714,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c68b16c4f961feb418d6652ce1a57714, type: 3}
 --- !u!224 &47399132 stripped
@@ -39986,6 +39991,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TestingHighScoreSystem (TextMeshPro)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540544002420313363, guid: c68b16c4f961feb418d6652ce1a57714,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c68b16c4f961feb418d6652ce1a57714, type: 3}
@@ -69879,6 +69889,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TestingScoringSystem (TextMeshPro)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4823084817994730824, guid: 7ef0c0183626132448a10fd7ba780e13,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4823084817994730825, guid: 7ef0c0183626132448a10fd7ba780e13,
         type: 3}
