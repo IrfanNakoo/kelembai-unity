@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Christina.GameSystems
+namespace VSX.UniversalVehicleCombat
 {
     public class DamageLabel : MonoBehaviour
     {

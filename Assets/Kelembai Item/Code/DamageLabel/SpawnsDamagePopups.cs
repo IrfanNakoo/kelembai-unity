@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Pool;
 using UnityEngine.SceneManagement;
 
-namespace Christina.GameSystems
+namespace VSX.UniversalVehicleCombat
 {
     // Class to manage spawning and pooling of damage popups
     public class SpawnsDamagePopups : MonoBehaviour

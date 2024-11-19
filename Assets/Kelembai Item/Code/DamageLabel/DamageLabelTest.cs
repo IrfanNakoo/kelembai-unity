@@ -1,6 +1,6 @@
-﻿using UnityEngine;
+﻿ using UnityEngine;
 
-namespace Christina.GameSystems
+namespace VSX.UniversalVehicleCombat
 {
     public class DamageLabelTest : MonoBehaviour
     {
