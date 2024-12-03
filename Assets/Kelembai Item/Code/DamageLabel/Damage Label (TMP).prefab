@@ -62,8 +62,8 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  highPointOffset: {x: -350, y: 300}
-  lowPointOffset: {x: -100, y: -500}
+  highPointOffset: {x: -1000, y: 500}
+  lowPointOffset: {x: -1000, y: -500}
   heightVariationMax: 150
   heightVariationMin: 50
   displayGizmos: 0

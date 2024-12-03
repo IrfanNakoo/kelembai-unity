@@ -8,6 +8,8 @@ TagManager:
   - EnemyCapitalShip
   - EnemyBase
   - EnemyAllRounderShip
+  - PlayerProjectile
+  - EnemyGL
   layers:
   - Default
   - TransparentFX

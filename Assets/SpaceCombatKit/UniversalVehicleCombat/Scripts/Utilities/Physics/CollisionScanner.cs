@@ -6,13 +6,13 @@ using UnityEngine.Events;
 namespace VSX.UniversalVehicleCombat
 {
     /// <summary>
-    /// Unity event for running functions when a raycast hit is detected.
+    /// Unity event for running functions when a raycast hit is detected
     /// </summary>
     [System.Serializable]
     public class OnCollisionScannerHitDetectedEventHandler : UnityEvent<RaycastHit> { }
 
     /// <summary>
-    /// This class uses a raycast from the transform's previous position to its current one to detect hits on colliders regardless of speed.
+    /// This class uses a raycast from the transform's previous position to its current one to detect a hit on a collider regardless of speed.
     /// </summary>
     public class CollisionScanner : MonoBehaviour, IRootTransformUser
     {
@@ -57,16 +57,6 @@ namespace VSX.UniversalVehicleCombat
             set { m_Rigidbody = value; }
         }
 
-        //////////////////////////////////////////////////////////////////////
-
-        [Header("Damage Settings")]
-        [SerializeField] private int critChance = 10; // Critical hit chance percentage
-        [SerializeField] private int critMultiplier = 2; // Critical damage multiplier
-        [SerializeField] private int minDamage = 10; // Minimum damage
-        [SerializeField] private int maxDamage = 30; // Maximum damage
-
-        //////////////////////////////////////////////////////////////////////
-
         [Header("Events")]
 
         // Hit detected event
@@ -98,7 +88,7 @@ namespace VSX.UniversalVehicleCombat
         }
 
         /// <summary>
-        /// Perform a single hit scan.
+        /// Do a single hit scan
         /// </summary>
         protected void DoHitScan()
         {
@@ -115,72 +105,29 @@ namespace VSX.UniversalVehicleCombat
 
             for (int i = 0; i < hits.Length; ++i)
             {
-                // Ignore hits on the object itself
                 if (ignoreHierarchyCollision && hits[i].transform.IsChildOf(rootTransform))
                 {
                     continue;
                 }
 
-                // Check if the hit object has the tag "EnemyCapitalShip"
+                // Check if the hit object has the tag "EnemyCapitalShip"//////////////ada update code sini
                 if (hits[i].collider.CompareTag("EnemyCapitalShip"))
                 {
-                    /////////////////////////////////////////////////////////
-                    ProcessEnemyHit(hits[i]);  // Process the enemy hit logic
-                    transform.position = hits[i].point; // Set position at hit point
-                    disabled = true;
-                    onHitDetected.Invoke(hits[i]);
-                    break;
-                    /////////////////////////////////////////////////////////
+                    ShotHit(hits[i].point); // Pass the hit point to the ShotHit method
+                    Debug.Log("Enemy hit!");
                 }
+
+                transform.position = hits[i].point;
+
+                disabled = true;
+                onHitDetected.Invoke(hits[i]);
+
+                break;
             }
 
             // Update the last position
             lastPosition = transform.position;
         }
-
-        /// <summary>
-        /// Process logic for hitting an enemy.
-        /// </summary>
-        /// <param name="hit">Raycast hit information.</param>
-        private void ProcessEnemyHit(RaycastHit hit)
-        {
-            Debug.Log("Enemy hit!");
-
-            // Generate random damage
-            int damage = Random.Range(minDamage, maxDamage);
-
-            // Determine if the hit is a critical hit
-            bool isCrit = Random.Range(0, 100) < critChance;
-            if (isCrit)
-            {
-                damage *= critMultiplier; // Apply critical damage multiplier
-            }
-
-            // Trigger the damage popup
-            if (SpawnsDamagePopups.Instance != null) // Ensure the singleton instance exists
-            {
-                SpawnsDamagePopups.Instance.DamageDone(damage, hit.point, isCrit);
-            }
-            else
-            {
-                Debug.LogWarning("SpawnsDamagePopups.Instance is not set!");
-            }
-
-            // Increment hit count for debugging purposes
-            IncrementShotsHit();
-        }
-
-        /// <summary>
-        /// Increment and log the number of successful shots.
-        /// </summary>
-        private void IncrementShotsHit()
-        {
-            shotsHit++;
-            Debug.Log($"Shots Hit: {shotsHit}");
-        }
-
-        // Tracks successful hits
-        private int shotsHit = 0;
 
         /// <summary>
         /// Disable this collision scanner.
@@ -191,7 +138,7 @@ namespace VSX.UniversalVehicleCombat
         }
 
         /// <summary>
-        /// Enable this collision scanner.
+        /// Enable this collision scanner
         /// </summary>
         public void SetHitScanEnabled()
         {
@@ -201,6 +148,7 @@ namespace VSX.UniversalVehicleCombat
         // Called every frame
         private void Update()
         {
+            // Hit scan interval management
             frameCountSinceLastScan += 1;
 
             switch (hitScanIntervalType)
@@ -221,6 +169,114 @@ namespace VSX.UniversalVehicleCombat
                     }
                     break;
             }
+
+            // Detect when the player presses the fire button (e.g., "Fire1")
+            if (Input.GetButtonDown("Fire1"))
+            {
+                ShotFired();
+                Debug.Log("Fire button pressed. Shot fired.");
+            }
         }
+
+        //
+        // Additional Methods for Accuracy Tracking
+        //
+
+        // New variables
+        private int shotsFired = 0;    // Tracks how many shots have been fired
+        private int shotsHit = 0;      // Tracks successful hits
+        private float accuracy = 0f;   // Accuracy percentage
+
+        // Method to increment shots fired
+        private void ShotFired()
+        {
+            shotsFired++;
+            Debug.Log("Shots Fired: " + shotsFired);
+        }
+
+        // Method to increment shots hit///////////////////////////////////ada update code sini
+        private void ShotHit(Vector3 hitPoint)
+        {
+            shotsHit++;
+            UpdateAccuracy();
+
+            // Calculate damage
+            int damage = CalculateDamage();
+
+            // Spawn damage pop-up
+            if (SpawnsDamagePopups.Instance != null) // Ensure the singleton instance exists
+            {
+                bool isCrit = damage >= maxDamage * critMultiplier; // Determine if it's a crit
+                SpawnsDamagePopups.Instance.DamageDone(damage, hitPoint, isCrit);
+            }
+            else
+            {
+                Debug.LogWarning("SpawnsDamagePopups.Instance is not set!");
+            }
+
+            Debug.Log($"Shots Hit: {shotsHit}, Damage: {damage}");
+        }
+
+
+        // Updates the accuracy based on shots fired and successful hits
+        private void UpdateAccuracy()
+        {
+            if (shotsFired > 0)
+            {
+                accuracy = ((float)shotsHit / shotsFired) * 100f;
+                Debug.Log("Accuracy: " + accuracy.ToString("F2") + "%");
+            }
+            else
+            {
+                Debug.Log("Accuracy: N/A");
+            }
+        }
+
+        // Save accuracy to PlayerPrefs
+        private void SaveAccuracy()
+        {
+            PlayerPrefs.SetFloat("PlayerAccuracy", accuracy);
+            PlayerPrefs.Save();
+            Debug.Log("Accuracy saved to PlayerPrefs: " + accuracy);
+        }
+
+        // Call this method when the game ends or when you want to store accuracy
+        public void EndLevel()
+        {
+            SaveAccuracy();
+            Debug.Log("Level ended. Accuracy saved.");
+        }
+
+
+        /////////////////////////////////////////////////////////////////////Valueable untuk damage label
+
+        [Header("Damage Settings")]
+        [SerializeField] private int critChance = 10; // Critical hit chance percentage
+        [SerializeField] private int critMultiplier = 2; // Critical damage multiplier
+        [SerializeField] private int minDamage = 10; // Minimum damage
+        [SerializeField] private int maxDamage = 30; // Maximum damage
+
+        /////////////////////////////////////////////////////////////////////
+
+        // <summary>///////////////////////////////////////////////////////////////////////////////
+        /// Calculates the damage for a hit, including critical hits.
+        /// </summary>
+        private int CalculateDamage()
+        {
+            // Generate random damage within range
+            int damage = Random.Range(minDamage, maxDamage);
+
+            // Check if the hit is a critical hit
+            bool isCrit = Random.Range(0, 100) < critChance;
+            if (isCrit)
+            {
+                damage *= critMultiplier; // Apply critical hit multiplier
+                Debug.Log("Critical hit!");
+            }
+
+            return damage;
+        }
+
+
     }
 }
