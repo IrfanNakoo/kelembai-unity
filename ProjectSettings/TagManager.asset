@@ -10,6 +10,7 @@ TagManager:
   - EnemyAllRounderShip
   - PlayerProjectile
   - EnemyGL
+  - GameLabel
   layers:
   - Default
   - TransparentFX

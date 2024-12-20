@@ -111,7 +111,7 @@ namespace VSX.UniversalVehicleCombat
                 }
 
                 // Check if the hit object has the tag "EnemyCapitalShip"//////////////ada update code sini
-                if (hits[i].collider.CompareTag("EnemyCapitalShip"))
+                if (hits[i].collider.CompareTag("GameLabel"))
                 {
                     ShotHit(hits[i].point); // Pass the hit point to the ShotHit method
                     Debug.Log("Enemy hit!");

@@ -6,16 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/Repeated Scene/SCK_MainMenu_S00.unity
+    path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/Scene UI/SCK_MainMenu_S00.unity
     guid: 2415e2c064cc4e14580a797e719a02db
   - enabled: 1
-    path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/Repeated Scene/SCK_Instruction_S00.unity
+    path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/Scene UI/SCK_Instruction_S00.unity
     guid: 5e5f47e69383f94459c4faabef99f4e5
   - enabled: 1
-    path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/Repeated Scene/SCK_Option_S00.unity
+    path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/Scene UI/SCK_Option_S00.unity
     guid: adb6ad54c87c83446b21e4969de517f1
   - enabled: 1
-    path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/Repeated Scene/SCK_Loadout_S00.unity
+    path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/Scene UI/SCK_Loadout_S00.unity
     guid: 7940ed2505a20054ebc34c0d0b980356
   - enabled: 1
     path: Assets/SpaceCombatKit/Demos/Scenes/MainScenes/Scene Episode 1/SCK_SpaceCombat_S01.unity
