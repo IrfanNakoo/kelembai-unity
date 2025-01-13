@@ -458,6 +458,10 @@ MonoBehaviour:
   onHitDetected:
     m_PersistentCalls:
       m_Calls: []
+  critChance: 50
+  critMultiplier: 2
+  minDamage: 500
+  maxDamage: 1500
 --- !u!114 &114045265111119580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10849,6 +10853,7 @@ MonoBehaviour:
           m_NumColorKeys: 2
           m_NumAlphaKeys: 2
       shaderFloatSettings: []
+    animatedTransforms: []
 --- !u!1 &6828308157790398390
 GameObject:
   m_ObjectHideFlags: 0

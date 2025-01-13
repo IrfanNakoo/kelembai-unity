@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b8a4a5fb6aebb84097c4cc2e6b533f7, type: 3}
   m_Name: SpEnemy
   m_EditorClassIdentifier: 
-  defaultColor: {r: 1, g: 0, b: 0.016239643, a: 1}
+  defaultColor: {r: 1, g: 0.6341775, b: 0, a: 1}
   sprites: []
   hostileTeams:
   - {fileID: 11400000, guid: 639d4bcf01760754680e8b5bac7a95b6, type: 2}

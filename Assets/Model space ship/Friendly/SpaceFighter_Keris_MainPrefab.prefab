@@ -22652,7 +22652,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -140.07422, y: 223.5581}
+  m_AnchoredPosition: {x: -140.07422, y: 226}
   m_SizeDelta: {x: 250, y: 146}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &8164801699206631729
@@ -22696,7 +22696,7 @@ MonoBehaviour:
   resourceAmountText: {fileID: 3871807300608957586}
   displayFraction: 1
   fillBarImage: {fileID: 6672220789100739214}
-  moduleMount: {fileID: 589265428808827824}
+  moduleMount: {fileID: 7462264529962982771}
 --- !u!1 &3668281926361879556
 GameObject:
   m_ObjectHideFlags: 0
@@ -35881,7 +35881,7 @@ MonoBehaviour:
   resourceAmountText: {fileID: 9047044301934638878}
   displayFraction: 1
   fillBarImage: {fileID: 3225104613657143270}
-  moduleMount: {fileID: 7462264529962982771}
+  moduleMount: {fileID: 589265428808827824}
 --- !u!1 &5464390522469036360
 GameObject:
   m_ObjectHideFlags: 0

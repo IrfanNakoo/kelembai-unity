@@ -2774,7 +2774,7 @@ MonoBehaviour:
   slotIconSpriteIndex: 0
   mainMenuSceneName: SCK_MainMenu_S00
   missionSceneNames:
-  - SCK_SpaceCombat_S01
+  - SCK_SpaceStation_S01_EP1
   onVehicleSelectionMode:
     m_PersistentCalls:
       m_Calls: []
